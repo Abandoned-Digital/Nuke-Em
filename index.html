@@ -1,7 +1,7 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Nuke'em Field Manual</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Stardos+Stencil:wght@700&family=Barlow:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700;800&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Courier+Prime:wght@400;700&family=Special+Elite&family=Stardos+Stencil:wght@700&display=swap">
 <style>
   /* Layout: the Arcworld field-manual frame (sticky tab rail, contents sidebar, 1:1 printed card faces),
      recoloured for a bunker: warm soot ground, radiation-sign yellow as the one accent. Single dark theme by choice. */
@@ -231,6 +231,109 @@
     .wrap,.railin{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
     header{padding-top:34px}.vnav{margin-left:0}.count{margin-left:0;width:100%}
   }
+
+  /* DOSSIER: a leaked government file on the end of the world.
+     Photocopy-grey sheets on a manila folder; stencil headings, DIN-like labels (the cards' Bahnschrift),
+     typewriter annotations; one stamp red. Single light look by choice: it is paper. */
+  :root{
+    color-scheme:light;
+    --ground:#e7e5dc; --panel:#f6f5ef; --panel-2:#edebe2;
+    --line:#b5b2a3; --line-soft:#d4d1c4;
+    --ink:#1b1c19; --ink-dim:#3b3c36; --ink-faint:#6a695f;
+    --accent:#b42318; --alarm:#b42318; --warn:#94590f;
+    --manila:#d8c28c; --manila-deep:#bfa465; --memo:#f7efc9;
+    --display:"Big Shoulders Stencil Display","Stardos Stencil",Impact,sans-serif;
+    --body:"Barlow","Bahnschrift",Arial,sans-serif;
+    --label:"Barlow Condensed","Bahnschrift","Arial Narrow",sans-serif;
+    --mono:"Courier Prime","Courier New",monospace;
+    --type:"Special Elite","Courier Prime","Courier New",monospace;
+  }
+  body{background:var(--ground);color:var(--ink);font-size:16px}
+  body::before{background:var(--manila)}
+
+  /* the folder: manila rail with file tabs */
+  .rail{background:var(--manila);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:3px solid var(--manila-deep)}
+  .railin{align-items:flex-end;min-height:58px}
+  .mark{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.04em;align-self:center}
+  .mark i{color:var(--accent)}
+  .vnav{gap:6px;align-self:flex-end}
+  .vtab{font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.16em;color:var(--ink-dim);
+    background:var(--manila-deep);border:0;border-radius:8px 8px 0 0;padding:10px 16px 9px;margin-top:8px}
+  .vtab:hover{color:var(--ink)}
+  .vtab[aria-selected="true"]{background:var(--ground);color:var(--ink);border:0}
+  .vtab u{border-color:var(--ink-faint);color:var(--ink-faint);font-family:var(--mono)}
+
+  /* cover of each file */
+  header{padding:54px 0 34px;border-bottom:2px solid var(--ink)}
+  header::after{display:none}
+  .eyebrow{font-family:var(--type);font-size:13px;letter-spacing:.06em;color:var(--accent);text-transform:uppercase}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(48px,9vw,96px);line-height:.92;letter-spacing:.01em;text-transform:uppercase;max-width:14ch}
+  .lede{font-size:18px;color:var(--ink-dim)}
+  .lede strong{color:var(--ink)}
+  .stamp{position:absolute;top:46px;right:0;font-family:var(--label);font-weight:700;font-size:clamp(15px,2.2vw,22px);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--accent);border:4px double var(--accent);border-radius:4px;
+    padding:6px 14px 5px 18px;transform:rotate(-7deg);opacity:.82;pointer-events:none}
+  @media (max-width:700px){.stamp{position:static;display:inline-block;margin:0 0 18px;transform:rotate(-3deg)}}
+  .redact{background:var(--ink);color:transparent;padding:0 .15em;border-radius:1px;cursor:help;transition:background .2s ease,color .2s ease}
+  .redact:hover,.redact:focus{background:transparent;color:var(--ink);outline:1px dashed var(--accent);outline-offset:2px}
+  .stats{background:var(--panel);border:1px solid var(--line)}
+  .stat{border-right:1px dashed var(--line)}
+  .stat b{font-family:var(--display);font-weight:800;font-size:30px}
+  .stat span{font-family:var(--label);font-size:12px;letter-spacing:.14em}
+
+  /* the typed sheets */
+  .doc{background:var(--panel);border:1px solid var(--line-soft);padding:clamp(20px,4vw,52px);
+    box-shadow:5px 5px 0 var(--panel-2),5px 5px 0 1px var(--line-soft)}
+  .doc section{scroll-margin-top:84px}
+  .doc .kicker{font-family:var(--type);font-size:13px;letter-spacing:.08em;color:var(--accent)}
+  .doc .kicker::before{content:"\00A7\00A0"}
+  .doc h3{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,38px);text-transform:uppercase;letter-spacing:.02em;line-height:1}
+  .doc h4{font-family:var(--label);font-weight:700;font-size:17px;letter-spacing:.12em;text-transform:uppercase}
+  .doc p,.doc ul,.doc ol{font-size:16px;color:var(--ink-dim)}
+  .toc{font-family:var(--mono);font-size:12.5px}
+  .toc b{font-family:var(--type);color:var(--accent);font-size:12px}
+  .toc a{color:var(--ink-faint);border-left-color:var(--line)}
+  .toc a:hover{color:var(--ink)}
+  .toc a.on{color:var(--accent);border-left-color:var(--accent)}
+  .steps li::before{background:var(--ink);color:var(--panel);border-color:var(--ink);font-family:var(--mono);font-weight:700}
+  .steps li b{font-family:var(--label);font-size:17px;letter-spacing:.06em;text-transform:uppercase}
+
+  /* typed memo slips */
+  .tip{background:var(--memo);border-left:4px solid var(--accent);box-shadow:2px 2px 0 var(--line-soft)}
+  .tip b{font-family:var(--type);font-size:12px;letter-spacing:.06em;color:var(--accent)}
+  .tip p{color:var(--ink-dim)}
+  .tip.open{border-left-color:var(--warn)}
+
+  /* forms and ledgers */
+  h2{font-family:var(--label);font-weight:700;font-size:15px;letter-spacing:.2em;color:var(--ink)}
+  h2::after{background:var(--ink)}
+  .sub{color:var(--ink-dim)}
+  table{background:var(--panel)}
+  thead th{font-family:var(--label);font-size:12px;letter-spacing:.14em;color:var(--ink-dim);border-bottom:2px solid var(--ink)}
+  td.k{font-family:var(--label);font-weight:700;font-size:16px;letter-spacing:.04em}
+  td.n{font-family:var(--mono);color:var(--accent);font-weight:700}
+  td.z{color:var(--ink-faint)}
+  tbody tr:hover{background:var(--panel-2)}
+  .order div{background:var(--panel)}
+  .order b{font-family:var(--label);font-size:17px;letter-spacing:.08em;text-transform:uppercase}
+  .order span{font-family:var(--mono)}
+  .clock i{font-family:var(--mono);background:var(--panel);border-color:var(--line)}
+  .clock i.mid{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+  .clockkey{font-family:var(--mono)}
+  .tg{font-family:var(--label);font-size:12px;letter-spacing:.12em;background:var(--panel)}
+  .count{font-family:var(--mono)}
+  .bcard{box-shadow:0 1px 3px rgba(27,28,25,.22)}
+  .qty{font-family:var(--mono);background:var(--ink);color:var(--panel);border-color:var(--ink)}
+  .cont{background:var(--panel)}
+  .cont h3{font-family:var(--display);font-weight:800;font-size:26px;text-transform:uppercase}
+  .cont .tag{font-family:var(--type);letter-spacing:.04em;text-transform:none;font-size:12px}
+  .cont .tot{font-family:var(--mono)}
+  .rel{background:var(--panel)}
+  .rel .v{font-family:var(--display);font-weight:800;font-size:30px;color:var(--accent)}
+  .rel .vt{font-family:var(--type);letter-spacing:.04em}
+  .soon,.ghost div{color:var(--ink-faint)}
+  footer{font-family:var(--type);color:var(--ink-faint)}
+  @media (prefers-reduced-motion:reduce){.redact{transition:none}}
 </style>
 
 <div class="rail">
@@ -251,9 +354,10 @@
 <!-- ============ MANUAL ============ -->
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
-    <p class="eyebrow">Rulebook &middot; version 0.8.2 &middot; 2&ndash;4 players &middot; ~60 minutes</p>
+    <div class="stamp" aria-hidden="true">Top secret</div>
+    <p class="eyebrow">File no. 0.8.3 &middot; Rulebook &middot; 2&ndash;4 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
-    <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over the biggest pile of ash.</p>
+    <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
       <div class="stat"><b>2&ndash;4</b><span>Players</span></div>
       <div class="stat"><b>~60</b><span>Minutes</span></div>
@@ -288,7 +392,7 @@
         <div class="tw"><table>
           <thead><tr><th>Component</th><th>Qty</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td class="k">Player boards</td><td class="n">4</td><td>One continent each (406 &times; 240 mm): numbered cities with cube spots (a solid starting row and a dashed growth row), the continent trait, and six card slots: Launchpad, Action, Second Silo, Shield and two Upgrades.</td></tr>
+            <tr><td class="k">Player boards</td><td class="n">4</td><td>One continent each (406 &times; 240 mm): numbered cities with cube spots (a solid starting row and a dashed growth row), the continent trait, and six card slots: Launchpad, Action and Shield, plus three Upgrade slots.</td></tr>
             <tr><td class="k">Population cubes</td><td class="n">~80</td><td>4 colours, about 20 each. 1 cube = about 5 million people; each city stands for its whole metropolitan region.</td></tr>
             <tr><td class="k">Crater tokens</td><td class="n">18</td><td>One per city on the four boards. Mark a city with no cubes left.</td></tr>
             <tr><td class="k">Fallout tokens</td><td class="n">~20</td><td>Small markers that cover one cube spot. One per nuke that hits a city (see <em>Fallout</em>); the Dirty Bomb leaves 3.</td></tr>
@@ -307,10 +411,11 @@
         <p class="kicker">03</p>
         <h3>Setup</h3>
         <ol class="steps">
+          <li><b>Lay out the game board</b>Put the game board in the middle of the table.</li>
           <li><b>Take a continent</b>Fill every solid square on your board with tracker cubes of your colour; the dashed rows stay empty. Take your 5 action cards and your launch code cards. Your continent's special trait is printed on its board and applies all game.</li>
-          <li><b>Shuffle the decks</b>Shuffle the Build and Propaganda decks separately.</li>
+          <li><b>Shuffle the decks</b>Shuffle the Build and Propaganda decks separately and put each face down on its spot on the game board, next to its discard spot.</li>
           <li><b>Deal hands</b>Deal each player 3 Build cards.</li>
-          <li><b>Set the Clock</b>4 players start at 30, 3 players at 27, 2 players at 22. Fewer players launch fewer nukes, so the fuse is shorter.</li>
+          <li><b>Set the Clock</b>Put a marker on the Clock: 4 players start at 30, 3 players at 27, 2 players at 22. Fewer players launch fewer nukes, so the fuse is shorter.</li>
           <li><b>First player</b>Give the first player token to the most paranoid player.</li>
         </ol>
       </section>
@@ -320,8 +425,8 @@
         <h3>A round</h3>
         <ol class="steps">
           <li><b>Plan, in secret</b>Everyone places one action card face down.</li>
-          <li><b>Reveal and resolve, one by one</b>Starting with the first player and going clockwise, each player reveals their action and resolves it fully before the next player reveals. The board keeps changing, so your plan may not fit any more by the time it's your turn.</li>
-          <li><b>End of round</b>Move the Clock 1 minute toward midnight. Discard any shield in your Shield slot, used or not. Take your action card back into your hand. Discard down to 5 Build and Propaganda cards in hand (action cards and launch code cards don't count). Pass the first player token clockwise.</li>
+          <li><b>Reveal and resolve, one by one</b>Starting with the first player and going clockwise, each player reveals their action and resolves it fully before the next player reveals.</li>
+          <li><b>End of round</b>Move the Clock 1 minute toward midnight. Discard any shield in your Shield slot. Take your action card back into your hand. Discard down to 5 Build and Propaganda cards in hand (action cards and launch code cards don't count). Pass the first player token clockwise.</li>
         </ol>
       </section>
 
@@ -338,7 +443,7 @@
         <h4>Build</h4>
         <p>Draw <strong>2</strong> Build cards into your hand.</p>
         <p><strong>Specials</strong> (green Build cards) are played on your own turn, before or after your action, and don't cost an action.</p>
-        <p><strong>Upgrades</strong> (purple Build cards) go into an Upgrade slot on your board as soon as you draw them. You can have <strong>at most 2</strong>. If you draw a third, keep the 2 you want and discard the other. Second Silo counts as one of them.</p>
+        <p><strong>Upgrades</strong> (purple Build cards) go into an Upgrade slot on your board as soon as you draw them. You can have <strong>at most 3</strong>, one per Upgrade slot. If you draw a fourth, keep the 3 you want and discard the other. Upgrades <strong>add up</strong>: two copies of the same upgrade give its effect twice.</p>
         <h4>Propaganda</h4>
         <p>Choose an opponent as your <strong>target</strong> and draw <strong>1</strong> Propaganda card.</p>
         <ul>
@@ -349,11 +454,11 @@
         <p>Gained cubes go to the city of your choice, into its <strong>dashed row</strong> on your board. A city can hold at most <strong>twice its starting cubes</strong>, minus any spots lost to <strong>fallout</strong>; when it is full, pick another city. If all your cities are full, you can't take in more people: cubes you would steal stay where they are, and cubes from the supply stay in the supply. Defectors keep their colour and count for whoever's city they live in, so a nuke on that city kills them too.</p>
         <p>Propaganda never moves the Doomsday Clock.</p>
         <h4>Prepare</h4>
-        <p>Put <strong>1</strong> card from your hand face down on your launchpad, with your <strong>launch code</strong> face down on top of it: one continent card and one city card. The code must name a city that exists on that continent; your city cards only list real targets. The card can be a real weapon or a <strong>decoy</strong>. Everyone sees that you have something ready, but not what, and not where it's going.</p>
+        <p>Put <strong>1</strong> card from your hand and your <strong>launch code</strong> (one continent card and one city card) face down on your Launchpad as one stack; the order doesn't matter. The code must name a city that exists on that continent; your city cards only list real targets. The card can be a real weapon or a <strong>decoy</strong>. Everyone sees that you have something ready, but not what, and not where it's going.</p>
         <p>The code is locked in. Next round the board may have changed, but your missile still flies to the city you picked, unless a card says otherwise (SLBM, Nuclear Bomber, Hacked Guidance, Deepfake).</p>
-        <p>You start with <strong>one launchpad</strong>. The <em>Second Silo</em> upgrade gives you a second one, and you can never have more than two.</p>
-        <div class="tip"><b>Use it or lose it</b><p>A prepared card must be launched <strong>the very next round</strong>. If your next action is anything other than Attack, the card fizzles: discard it <strong>face down</strong> when you reveal that action, so nobody learns whether it was real. You can't sit on a missile and wait for someone to drop their guard.</p></div>
-        <div class="tip"><b>Decoys</b><p>A decoy is never launched. You prepare it so the table thinks a missile is coming, hope someone wastes a Defend, then do something else and let it fizzle. It always pays a little: when it fizzles, draw 1 Build card, plus 1 more if anyone revealed Defend while it waited. (That draw shows the table it was a decoy, but only after the bluff has done its work.)</p></div>
+        <p>Your Launchpad holds <strong>1 prepared card</strong>. Each <em>Extra Silo</em> upgrade lets Prepare put 1 more card on it, so with both copies it holds 3. All cards on your Launchpad share the one launch code.</p>
+        <div class="tip"><b>Use it or lose it</b><p>A prepared card must be launched <strong>the very next round</strong>. If your next action is anything other than Attack, the card fizzles: put it on the discard pile <strong>face up</strong> when you reveal that action. The discard pile is open, so everyone sees it was a real weapon or a decoy. You can't sit on a missile and wait for someone to drop their guard.</p></div>
+        <div class="tip"><b>Decoys</b><p>A decoy is never launched. You prepare it so the table thinks a missile is coming, hope someone wastes a Defend, then do something else and let it fizzle. It always pays a little: when it fizzles, draw 1 Build card, plus 1 more if anyone revealed Defend while it waited.</p></div>
         <p>You can only plan Prepare if you have a weapon or decoy in hand, and only plan Attack if something is on your launchpad.</p>
         <h4>Attack</h4>
         <p>Launch what you prepared last round. The details are in <em>Attacks</em> below. An <em>SLBM</em> is prepared with a code like any weapon, so nobody can spot it, but when you launch it you may ignore the code and choose any city.</p>
@@ -367,7 +472,7 @@
         <p class="kicker">06</p>
         <h3>Attacks</h3>
         <ol class="steps">
-          <li><b>Reveal the code and the weapon</b>Turn over your launch code, for example <em>Europe 3</em> (Paris), and your prepared card together; the order doesn't matter. With two launchpads, both cards fire at the same target, as two separate attacks: one Missile Defence stops only one of them.</li>
+          <li><b>Reveal the code and the weapon</b>Turn over your launch code, for example <em>Europe 3</em> (Paris), and your prepared card together; the order doesn't matter. With more than one card on your Launchpad, they all fire at the same target, each as a separate attack: one Missile Defence stops only one of them.</li>
           <li><b>The target may interrupt</b>If the target's face-down action is Defend, they may reveal it now and raise a shield.</li>
           <li><b>Resolve</b>The weapon hits the city in your code. You cannot change the target unless a card lets you. If the target has an active shield, the attack is blocked, unless the weapon ignores shields. Otherwise remove the weapon's damage in cubes. Overkill is wasted.</li>
           <li><b>Move the Clock</b>Move it forward by the weapon's Clock value, even if the attack was blocked or hit nothing.</li>
@@ -390,23 +495,23 @@
       <section id="s-example">
         <p class="kicker">07</p>
         <h3>Example: two rounds on your board</h3>
-        <p>You play North America. Your board has six card slots: <em>Launchpad</em> (your code cards go on top of the prepared card), <em>Second Silo</em>, <em>Action</em>, <em>Shield</em> and two <em>Upgrade</em> slots.</p>
+        <p>You play North America. Your board has six card slots: <em>Launchpad</em>, <em>Action</em> and <em>Shield</em> in the first column, three <em>Upgrade</em> slots in the second.</p>
         <h4>A. Prepare, then Attack</h4>
         <ol class="steps">
           <li><b>Round 1, Plan</b>Put <em>Prepare</em> face down in your Action slot. Your other four action cards stay in your hand.</li>
-          <li><b>Round 1, your turn</b>Flip Prepare. Put an ICBM from your hand face down in your Launchpad slot. Put your launch code, the Europe card and the City 3 card (Paris), face down on top of it. Everyone sees something is armed, but not what or where.</li>
+          <li><b>Round 1, your turn</b>Flip Prepare. Put an ICBM from your hand and your launch code, the Europe card and the City 3 card (Paris), face down in your Launchpad slot. Everyone sees something is armed, but not what or where.</li>
           <li><b>Round 1, end</b>The Clock moves 1 minute. Take Prepare back into your hand.</li>
           <li><b>Round 2, Plan</b>Put <em>Attack</em> face down in your Action slot.</li>
           <li><b>Round 2, your turn</b>Flip Attack, then the code and the ICBM ("Europe 3, Paris!"). Europe may interrupt with a shield. If not, Paris loses 4 cubes and the Clock moves +2. Discard the ICBM and take your code cards back.</li>
         </ol>
-        <div class="tip"><b>If you don't attack in round 2</b><p>When you flip any other action, the ICBM fizzles: discard it face down. A decoy is used exactly this way, on purpose.</p></div>
+        <div class="tip"><b>If you don't attack in round 2</b><p>When you flip any other action, the ICBM fizzles: discard it. A decoy is used exactly this way, on purpose.</p></div>
         <h4>B. Defending</h4>
         <ol class="steps">
           <li><b>Round 1</b>An opponent prepares. A card appears on their Launchpad.</li>
           <li><b>Round 2, Plan</b>You hold a shield, so you put <em>Defend</em> face down in your Action slot.</li>
           <li><b>Round 2, attacker first</b>They flip Attack and their code: "North America 1!" You flip Defend immediately, out of turn, and put a Missile Defence from your hand in your Shield slot. The attack is blocked and the Missile Defence is discarded. Your Defend is used up.</li>
           <li><b>Round 2, you first</b>On your turn, flip Defend and put the shield in your Shield slot. It protects your whole continent for the rest of the round.</li>
-          <li><b>Round 2, end</b>Discard any shield still in your Shield slot, used or not. Take Defend back into your hand. If nobody attacked you, that shield and that turn were wasted.</li>
+          <li><b>Round 2, end</b>Discard any shield still in your Shield slot. Take Defend back into your hand. If nobody attacked you, that shield and that turn were wasted.</li>
         </ol>
         <h4>Where cards sit</h4>
         <div class="tw"><table>
@@ -439,12 +544,6 @@
         <p><strong>Tie:</strong> the player with the most surviving cities (not craters) wins. If still tied, share the victory and the radiation.</p>
       </section>
 
-      <section id="s-variant">
-        <p class="kicker">10</p>
-        <h3>Variant: Final Exchange</h3>
-        <p>When the game ends, every weapon card still in a player's hand fires. No launchpad and no preparing: in turn order, each player launches their weapons one after another, choosing a continent and city for each. Shields don't work in the Final Exchange. Then score.</p>
-        <p>This makes hoarding a gamble: use your weapons now, or keep them for the end? Try it in playtesting and drop it if it's too swingy.</p>
-      </section>
 
     </div>
   </div>
@@ -453,6 +552,7 @@
 <!-- ============ CONTINENTS ============ -->
 <div class="view" id="v-continents" role="tabpanel" aria-labelledby="t-continents" hidden>
   <header>
+    <div class="stamp" aria-hidden="true">Eyes only</div>
     <p class="eyebrow">Player boards &middot; 20 Population each</p>
     <h1>Continents</h1>
     <p class="lede">Every continent has the same Population, spread over a different number of cities. City names and player colours are placeholders.</p>
@@ -475,6 +575,7 @@
 <!-- ============ BUILD DECK ============ -->
 <div class="view" id="v-build" role="tabpanel" aria-labelledby="t-build" hidden>
   <header>
+    <div class="stamp" aria-hidden="true">Restricted</div>
     <p class="eyebrow">Build deck &middot; 44 &times; 68 mm Mini-Euro &middot; printed at 1:1</p>
     <h1>Build Deck</h1>
     <p class="lede">Drawn with the Build action. Weapons and decoys go to the launchpad, shields are played with Defend. The keyline colour shows the category. All numbers are first-pass placeholders.</p>
@@ -497,6 +598,7 @@
 <!-- ============ PROPAGANDA ============ -->
 <div class="view" id="v-propaganda" role="tabpanel" aria-labelledby="t-propaganda" hidden>
   <header>
+    <div class="stamp" aria-hidden="true">Approved for release</div>
     <p class="eyebrow">Propaganda deck &middot; 44 &times; 68 mm Mini-Euro &middot; printed at 1:1</p>
     <h1>Propaganda</h1>
     <p class="lede">Drawn with the Propaganda action. About half the deck wins people over, a quarter blows up in your face, and the rest are dirty tricks you keep for later. Propaganda never moves the Doomsday Clock.</p>
@@ -518,6 +620,7 @@
 <!-- ============ CHANGELOG ============ -->
 <div class="view" id="v-changelog" role="tabpanel" aria-labelledby="t-changelog" hidden>
   <header>
+    <div class="stamp" aria-hidden="true">Declassified</div>
     <p class="eyebrow">Design history &middot; latest <b id="cl-latest">&mdash;</b></p>
     <h1>Changelog</h1>
     <p class="lede">What was decided, newest first. The manual always describes the game <strong>as it stands today</strong>.</p>
@@ -539,8 +642,8 @@
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
       <tbody>
         <tr><td class="k">Player boards</td><td>4 boards, 406 &times; 240 mm, one per A3 sheet (layers <em>Board - North America</em>, <em>Board - Europe</em>, <em>Board - Asia</em>, <em>Board - Africa</em>, page 1). Show one board at a time when printing.</td></tr>
-        <tr><td class="k">Build 1</td><td>Cards 1&ndash;36, 4 rows of 9 on A3 (layer <em>Build 1</em>, page 1)</td></tr>
-        <tr><td class="k">Build 2</td><td>Cards 37&ndash;60 (layer <em>Build 2</em>, page 1)</td></tr>
+        <tr><td class="k">Build 1</td><td>Cards 1&ndash;35: weapons, decoys and the Missile Defences, 4 rows of 9 on A3 (layer <em>Build 1</em>, page 1)</td></tr>
+        <tr><td class="k">Build 2</td><td>Cards 36&ndash;67: the other shields, specials and upgrades (layer <em>Build 2</em>, page 1)</td></tr>
         <tr><td class="k">Build (Back)</td><td>Page 2. Print it behind each Build sheet; every Build back is the same.</td></tr>
         <tr><td class="k">Propaganda</td><td>All 29 Propaganda cards (layer <em>Propaganda</em>, page 1)</td></tr>
         <tr><td class="k">Propaganda (Back)</td><td>Page 2, layer <em>Propaganda (Back)</em></td></tr>
@@ -554,6 +657,19 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.8.3</p><p class="vt">Slots and silos</p></div>
+        <ul>
+          <li><b>Board slots:</b> Launchpad, Action and Shield in the first column, three Upgrade slots in the second. The Second Silo slot is gone.</li>
+          <li><b>Up to 3 upgrades</b> per player. Every upgrade is in the Build deck twice (67 cards). Two copies of the same upgrade add up.</li>
+          <li><b>Second Silo is now Extra Silo:</b> Prepare may put 1 more card on your Launchpad, so two Extra Silos let you hold 3. All of them fire at the one target as separate attacks.</li>
+          <li><b>Fizzled cards go to the discard face up.</b> The discard pile is open, and it proves the card was a real weapon or decoy. Sabotage follows the same rule.</li>
+          <li>Prepare: your card and your code cards go down as one face-down stack; the order doesn't matter.</li>
+          <li><b>Setup</b> starts by putting the game board in the middle; the decks go on their spots on the board, and a marker goes on the Clock.</li>
+          <li>The <b>Final Exchange</b> variant is dropped for now.</li>
+          <li><b>Every upgrade stacks</b> with its second copy. Early Warning's look is optional. <b>Fallout Shelters</b> now cancels 1 fallout per round on one of your cities (it no longer softens hits). <b>Propaganda HQ</b> is renamed <b>Spin Doctors</b>: draw 1 extra Propaganda card and keep one. <b>Shield Network</b> lets Defend play 1 extra shield card, so each extra block still costs a card.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.8.2</p><p class="vt">Code cards</p></div>
         <ul>
@@ -775,15 +891,15 @@ const BUILD = [
   {n:"Arms Deal", t:"special", q:1, tx:"Choose a card from your hand and swap it with a random card from another player's hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 5 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
   {n:"Arms Race", t:"special", q:1, tx:"Every player draws 1 Build card. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
-  {n:"Sabotage", t:"special", q:1, tx:"Choose a prepared card on another player's launchpad: it fizzles, and they discard it face down.", fl:"Someone loosened a bolt."},
+  {n:"Sabotage", t:"special", q:1, tx:"Choose a prepared card on another player's launchpad: it fizzles and they discard it.", fl:"Someone loosened a bolt."},
   {n:"Five-Year Plan", t:"special", q:2, tx:"Shuffle the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
-  {n:"Second Silo", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. You have a second launchpad: Prepare places up to 2 cards, and Attack fires both at the same target, as two separate attacks.", fl:"Twice the deterrence."},
-  {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. At the start of each round, look at one prepared launch code.", fl:"Beep."},
-  {n:"Fallout Shelters", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. Each attack on you removes 1 cube fewer, to a minimum of 1.", fl:"Duck and cover."},
-  {n:"Propaganda HQ", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. When you perform the Propaganda action, draw 2 cards and keep 1.", fl:"Truth, lightly edited."},
-  {n:"Nuclear Sub", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
-  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
-  {n:"Shield Network", t:"upgrade", q:1, tx:"When you draw this, put it in an Upgrade slot. Each of your Missile Defence cards blocks 2 attacks instead of 1.", fl:"Overlapping fields of hope."}
+  {n:"Extra Silo", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same target, as separate attacks.", fl:"Twice the deterrence."},
+  {n:"Early Warning", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. At the start of each round, you may look at one prepared launch code.", fl:"Beep."},
+  {n:"Fallout Shelters", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Once per round, when a nuke would put fallout on one of your cities, you may cancel that fallout.", fl:"Duck and cover."},
+  {n:"Spin Doctors", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. When you take the Propaganda action, draw 1 extra card. Keep one and discard the rest.", fl:"Truth, lightly edited."},
+  {n:"Nuclear Sub", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
+  {n:"Doomsday Bunker", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
+  {n:"Shield Network", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
 ];
 
 /* ============ view switching, with a bookmarkable #token per tab ============ */
