@@ -333,6 +333,11 @@
   .rel .vt{font-family:var(--type);letter-spacing:.04em}
   .soon,.ghost div{color:var(--ink-faint)}
   footer{font-family:var(--type);color:var(--ink-faint)}
+  /* link to the playable game: a red file tab at the end of the rail */
+  .playlink{font-family:var(--label);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+    background:var(--accent);color:var(--panel);border-radius:8px 8px 0 0;padding:10px 16px 9px;margin-top:8px;align-self:flex-end;white-space:nowrap}
+  .playlink:hover{background:var(--ink)}
+  .playlink:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){.redact{transition:none}}
 </style>
 
@@ -346,6 +351,7 @@
       <button class="vtab" role="tab" id="t-propaganda" aria-controls="v-propaganda" aria-selected="false">Propaganda <u id="tp-n">&mdash;</u></button>
       <button class="vtab" role="tab" id="t-changelog" aria-controls="v-changelog" aria-selected="false">Changelog</button>
     </nav>
+    <a class="playlink" href="https://abandoned-digital.github.io/Nuke-Em/play/">Play the game &rarr;</a>
   </div>
 </div>
 
