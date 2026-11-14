@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.9.0 &middot; Rulebook &middot; 2&ndash;4 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.9.1 &middot; Rulebook &middot; 2&ndash;4 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -639,6 +639,15 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.9.1</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 2</td><td>49&ndash;50 Spy Satellite</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.9.0</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -673,6 +682,12 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.9.1</p><p class="vt">Eyes in the sky</p></div>
+        <ul>
+          <li><b>Spy Satellite</b> shows all cards on one player's Launchpad, launch code included, instead of one prepared card.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.9.0</p><p class="vt">Simulated</p></div>
         <ul>
@@ -959,7 +974,7 @@ const BUILD = [
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it from your hand when any player is attacked, even out of turn and without Defend: block that attack.", fl:"Friends in high orbits."},
   {n:"Civil Defence", t:"shield", q:3, boxes:[["3","MOVE"]], tx:"Doesn't block. When you play it, move up to 3 of your population cubes between your own cities.", fl:"Duck, cover, and relocate."},
   {n:"Budget Increase", t:"special", q:2, tx:"Draw 2 Build cards.", fl:"The schools can wait."},
-  {n:"Spy Satellite", t:"special", q:2, tx:"Look at one prepared card on any player's launchpad.", fl:"Smile."},
+  {n:"Spy Satellite", t:"special", q:2, tx:"Look at all cards on one player's Launchpad, including the launch code.", fl:"Smile."},
   {n:"Reconstruction", t:"special", q:1, tx:"Put 2 population cubes from the supply on one of your cities that isn't a crater, or remove 1 fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:1, tx:"Choose a card from your hand and swap it with a random card from another player's hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 5 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
