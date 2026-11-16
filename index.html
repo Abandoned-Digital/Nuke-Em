@@ -14,7 +14,7 @@
     --alarm:#d8432c;            /* the Clock, craters, midnight */
     --warn:#c9722f;
     /* player colours (placeholder assignment) */
-    --p-na:#3f86c4; --p-eu:#e0b532; --p-as:#c8372d; --p-af:#3f9e6e;
+    --p-na:#3f86c4; --p-eu:#e0b532; --p-as:#c8372d; --p-af:#3f9e6e; --p-sa:#d6448f;
     /* Build deck keylines: one per card category */
     --rule-weapon:#c8372d; --rule-decoy:#a08a5c; --rule-shield:#3f86c4; --rule-special:#3f9e6e; --rule-upgrade:#8a5cc2;
     --rule-success:#c2185b; --rule-backfire:#6b6b66; --rule-trick:#00897b;
@@ -123,7 +123,7 @@
     border:1px solid var(--line);background:var(--panel);color:var(--accent);
     font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center}
   .steps li b{display:block;font-family:var(--display);font-size:14.5px;color:var(--ink);font-weight:600;margin-bottom:2px;letter-spacing:.02em}
-  .order{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line);margin:0 0 14px}
+  .order{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line);margin:0 0 14px}
   .order div{background:var(--panel);padding:12px 12px 11px}
   .order b{display:block;font-family:var(--display);font-size:14px;color:var(--ink);letter-spacing:.03em}
   .order span{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);line-height:1.4;display:block;margin-top:3px}
@@ -346,12 +346,12 @@
     <span class="mark">Nuke<i>'em</i></span>
     <nav class="vnav" role="tablist" aria-label="Field manual sections">
       <button class="vtab" role="tab" id="t-manual" aria-controls="v-manual" aria-selected="true">Manual</button>
-      <button class="vtab" role="tab" id="t-continents" aria-controls="v-continents" aria-selected="false">Continents <u>4</u></button>
+      <button class="vtab" role="tab" id="t-continents" aria-controls="v-continents" aria-selected="false">Continents <u>5</u></button>
       <button class="vtab" role="tab" id="t-build" aria-controls="v-build" aria-selected="false">Build Deck <u id="tb-n">&mdash;</u></button>
       <button class="vtab" role="tab" id="t-propaganda" aria-controls="v-propaganda" aria-selected="false">Propaganda <u id="tp-n">&mdash;</u></button>
       <button class="vtab" role="tab" id="t-changelog" aria-controls="v-changelog" aria-selected="false">Changelog</button>
     </nav>
-    <a class="playlink" href="https://abandoned-digital.github.io/Nuke-Em/play/" target="_blank" rel="noopener">Play the game &rarr;</a>
+    <a class="playlink" href="https://abandoned-digital.github.io/Nuke-Em/game/" target="_blank" rel="noopener">Play the game &rarr;</a>
   </div>
 </div>
 
@@ -361,15 +361,15 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.9.1 &middot; Rulebook &middot; 2&ndash;4 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.10.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
-      <div class="stat"><b>2&ndash;4</b><span>Players</span></div>
+      <div class="stat"><b>2&ndash;5</b><span>Players</span></div>
       <div class="stat"><b>~60</b><span>Minutes</span></div>
       <div class="stat"><b>20</b><span>Population each</span></div>
       <div class="stat"><b>30</b><span>Minutes to midnight</span></div>
-      <div class="stat"><b>5</b><span>Actions</span></div>
+      <div class="stat"><b>6</b><span>Actions</span></div>
     </div>
   </header>
 
@@ -398,13 +398,12 @@
         <div class="tw"><table>
           <thead><tr><th>Component</th><th>Qty</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td class="k">Player boards</td><td class="n">4</td><td>One per continent (about 322 &times; 106 mm): the continent name and trait, and six card slots in one row: Action, Previous Action, Launchpad, Shield, Upgrade 1 and Upgrade 2. North America's board has no Previous Action slot (see its trait). Your cities are on the world map, not on your board.</td></tr>
-            <tr><td class="k">Population cubes</td><td class="n">~80</td><td>4 colours, about 20 each. 1 cube = about 5 million people; each city stands for its whole metropolitan region. The supply is unlimited: if a colour runs out, use any stand-in.</td></tr>
+            <tr><td class="k">Player boards</td><td class="n">5</td><td>One per continent: the continent name and trait, and five card slots in one row: Action, Locked, Launchpad, Shield and Upgrade. North America's board has no Locked slot (see its trait). Your cities are on the world map, not on your board.</td></tr>
+            <tr><td class="k">Population cubes</td><td class="n">~100</td><td>5 colours, about 20 each. 1 cube = about 5 million people; each city stands for its whole metropolitan region. The supply is unlimited: if a colour runs out, use any stand-in.</td></tr>
             <tr><td class="k">Fallout tokens</td><td class="n">~40</td><td>Small markers that cover one cube spot. A nuke leaves one for every population cube it removes from a city (see <em>Fallout</em>).</td></tr>
-            <tr><td class="k">Game board</td><td class="n">1</td><td>A world map (A2, 594 &times; 420 mm) shared by everyone, in the middle of the table. All four continents in their player colours, with every numbered city in a box of cube spots (a solid starting row and a dashed growth row) linked to its place on the map. Bottom left, in the South Atlantic: the Doomsday Clock (30 spots running clockwise to midnight, start spots for 4, 3 and 2 players marked). Bottom right, in the Indian Ocean: the Build and Propaganda deck spots. Keep the cube supply and the fallout tokens next to you, off the board. The Clock marker is any cube or coin.</td></tr>
-            <tr><td class="k">Action cards</td><td class="n">5 / player</td><td>Build, Propaganda, Prepare, Attack, Defend. Mini-Euro cards in your colour, all with the same back, so your plan stays secret.</td></tr>
-            <tr><td class="k">Launch codes</td><td class="n">3 / player</td><td>Mini-Euro cards, one per opponent continent, listing its cities. All three share one back in your colour, so nobody can tell who you are aiming at.</td></tr>
-            <tr><td class="k">Helper cards</td><td class="n">4 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Targets (all four continents' cities), Setup + Game end.</td></tr>
+            <tr><td class="k">Game board</td><td class="n">1</td><td>A world map (A2, 594 &times; 420 mm) shared by everyone, in the middle of the table. All five continents in their player colours, with every numbered city in a box of cube spots (a solid starting row and a dashed growth row) linked to its place on the map. In an empty ocean: the Doomsday Clock (32 spots running clockwise to midnight, start spots for 5, 4, 3 and 2 players marked). Bottom right, in the Indian Ocean: the Build and Propaganda deck spots. Keep the cube supply and the fallout tokens next to you, off the board. The Clock marker is any cube or coin.</td></tr>
+            <tr><td class="k">Action cards</td><td class="n">6 / player</td><td>Build, Propaganda, Prepare, Attack, Defend, Pass. Mini-Euro cards in your colour, all with the same back, so your plan stays secret.</td></tr>
+            <tr><td class="k">Helper cards</td><td class="n">4 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Targets (all five continents' cities), Setup + Game end.</td></tr>
             <tr><td class="k">Build deck</td><td class="n" id="m-build">&mdash;</td><td>Weapons, decoys, shields and specials.</td></tr>
             <tr><td class="k">Propaganda deck</td><td class="n" id="m-prop">&mdash;</td><td>Successes, backfires and tricks.</td></tr>
             <tr><td class="k">First player token</td><td class="n">1</td><td>Any distinct marker; it stays with the first player, not on the board.</td></tr>
@@ -417,10 +416,10 @@
         <h3>Setup</h3>
         <ol class="steps">
           <li><b>Lay out the game board</b>Put the world map in the middle of the table, where everyone can reach it.</li>
-          <li><b>Take a continent</b>Take its player board and put it in front of you. On the world map, fill every solid square of your continent's cities with population cubes of your colour; the dashed rows stay empty. Take your 5 action cards and your launch code cards. Your continent's special trait is printed on your player board and applies all game.</li>
+          <li><b>Take a continent</b>Take its player board and put it in front of you. On the world map, fill every solid square of your continent's cities with population cubes of your colour; the dashed rows stay empty. Take your 6 action cards. Your continent's special trait is printed on your player board and applies all game.</li>
           <li><b>Shuffle the decks</b>Shuffle the Build and Propaganda decks separately and put each face down on its spot on the game board. Each discard pile lies face up next to the board, beside its deck.</li>
-          <li><b>Deal hands</b>Deal each player 3 Build cards.</li>
-          <li><b>Set the Clock</b>Put a marker on the Clock: 4 players start at 30, 3 players at 27, 2 players at 22. Fewer players launch fewer nukes, so the fuse is shorter.</li>
+          <li><b>Deal hands</b>Deal each player 3 Build cards. An upgrade among them goes straight into your Upgrade slot (see <em>Build</em>).</li>
+          <li><b>Set the Clock</b>Put a marker on the Clock: 5 players start at 32, 4 players at 30, 3 players at 27, 2 players at 22. Fewer players launch fewer nukes, so the fuse is shorter.</li>
           <li><b>First player</b>Give the first player token to the most paranoid player.</li>
         </ol>
       </section>
@@ -429,27 +428,30 @@
         <p class="kicker">04</p>
         <h3>A round</h3>
         <ol class="steps">
-          <li><b>Plan, all at once</b>Everyone plans at the same time and in secret; there is no turn order in this step. Place one action card face down in your Action slot. It can't be the card in your Previous Action slot.</li>
+          <li><b>Plan, all at once</b>Everyone plans at the same time and in secret; there is no turn order in this step. Place one action card face down in your Action slot. It can't be the card in your Locked slot.</li>
           <li><b>Reveal and resolve, one by one</b>Starting with the first player and going clockwise, each player reveals their action and resolves it fully before the next player reveals.</li>
-          <li><b>End of round</b>Discard any shield in your Shield slot. Take the card in your Previous Action slot back into your hand, then move this round's action card from your Action slot to your Previous Action slot. Discard down to 5 Build and Propaganda cards in hand (action cards and launch code cards don't count). Pass the first player token clockwise.</li>
+          <li><b>End of round</b>Discard any shield in your Shield slot. Take the card in your Locked slot back into your hand, then move this round's action card from your Action slot to your Locked slot. Pass the first player token clockwise.</li>
         </ol>
+        <h4>Hand limit: 5, at all times</h4>
+        <p>You never hold more than <strong>5</strong> Build and Propaganda cards (action cards don't count). Whenever a card would be your sixth, choose any one of the six and discard it, the new card included. There is no discarding at the end of the round.</p>
       </section>
 
       <section id="s-actions">
         <p class="kicker">05</p>
-        <h3>The five actions</h3>
+        <h3>The six actions</h3>
         <div class="order">
           <div><b>Build</b><span>Draw 2 Build cards</span></div>
           <div><b>Propaganda</b><span>Draw 1 Propaganda card</span></div>
           <div><b>Prepare</b><span>1 card onto your launchpad</span></div>
           <div><b>Attack</b><span>Launch it the next round</span></div>
           <div><b>Defend</b><span>Raise a shield</span></div>
+          <div><b>Pass</b><span>Do nothing</span></div>
         </div>
-        <p><strong>Never the same action twice in a row.</strong> The action card you played last round lies face up in your Previous Action slot, so you can't plan it this round. You choose from the other four. In round 1 the slot is empty. Everyone can see what you can't do: if you Defended last round, you can't Defend this round. The one exception is North America (<em>American Exceptionalism</em>): it has no Previous Action slot. At cleanup it takes its action card straight back into its hand, so it always plans from all five.</p>
+        <p><strong>Never the same action twice in a row.</strong> The action card you played last round lies face up in your <strong>Locked</strong> slot, so you can't plan it this round. You choose from the other five. In round 1 the slot is empty. Everyone can see what you can't do: if you Defended last round, you can't Defend this round. The one exception is North America (<em>American Exceptionalism</em>): it has no Locked slot. At the end of the round it takes its action card straight back into its hand, so it always plans from all six.</p>
         <h4>Build</h4>
         <p>Draw <strong>2</strong> Build cards into your hand.</p>
         <p><strong>Specials</strong> (green Build cards) are played on your own turn, before or after your action, and don't cost an action.</p>
-        <p><strong>Upgrades</strong> (purple Build cards) go into an Upgrade slot on your board as soon as you draw them. You can have <strong>at most 2</strong>, one per Upgrade slot. If you draw a third, keep the 2 you want and discard the other. Upgrades <strong>add up</strong>: two copies of the same upgrade give its effect twice.</p>
+        <p><strong>Upgrades</strong> (purple Build cards) go into your <strong>Upgrade slot</strong> as soon as you draw them. You have <strong>one</strong>. If it is already taken, or you draw two upgrades at once, keep the one you want and discard the others. Upgrades don't count toward your hand.</p>
         <h4>Propaganda</h4>
         <p>Choose an opponent as your <strong>target</strong> and draw <strong>1</strong> Propaganda card.</p>
         <ul>
@@ -461,31 +463,32 @@
         <p><em>Counter-Propaganda</em> and <em>Censorship</em> answer any Propaganda card another player draws against you, Tricks included. Censorship resolves the card as if you had drawn it, aimed at the player who drew it; a Censored Trick goes to your hand. <em>Olympic Gold</em> targets every opponent, so each of them may answer it for their own population cube.</p>
         <p>Propaganda never moves the Doomsday Clock.</p>
         <h4>Prepare</h4>
-        <p>Put <strong>1</strong> card from your hand and one <strong>launch code</strong> (the card of the opponent you aim at) face down on your Launchpad as one stack; the order doesn't matter. The card can be a real weapon or a <strong>decoy</strong>. Everyone sees that you have something ready, but not what, and not at whom.</p>
-        <p>The continent is locked in, unless a card says otherwise (SLBM, Deepfake). The <strong>city</strong> is not: you only name it when you launch.</p>
-        <p>Your Launchpad holds <strong>1 prepared card</strong>. Each <em>Extra Silo</em> upgrade lets Prepare put 1 more card on it, so with both copies it holds 3. All cards on your Launchpad share the one launch code.</p>
+        <p>Put <strong>1</strong> card from your hand face down on your Launchpad. It can be a real weapon or a <strong>decoy</strong>. Everyone sees that you have something ready, but not what. You don't choose a target yet: you pick the continent and the city when you launch.</p>
+        <p>Your Launchpad holds <strong>1 prepared card</strong>. With an <em>Extra Silo</em> in your Upgrade slot, Prepare may put 1 more card on it.</p>
         <div class="tip"><b>Use it or lose it</b><p>A prepared card must be launched <strong>the very next round</strong>. If your next action is anything other than Attack, the card fizzles: put it on the discard pile <strong>face up</strong> when you reveal that action. The discard pile is open, so everyone sees it was a real weapon or a decoy. You can't sit on a missile and wait for someone to drop their guard.</p></div>
         <div class="tip"><b>Decoys</b><p>A decoy is never launched. You prepare it so the table thinks a missile is coming, hope someone wastes a Defend, then do something else and let it fizzle. It always pays a little: at the end of the round it fizzles, draw 1 Build card, plus 1 more if another player revealed Defend that round. Those are the players who planned while looking at your loaded Launchpad. A decoy destroyed by <em>Sabotage</em> pays nothing.</p></div>
         <p>You can only plan Prepare if you have a weapon or decoy in hand, and only plan Attack if something is on your launchpad. Attacking with only a decoy on your Launchpad is allowed: the decoy fizzles as usual.</p>
         <h4>Attack</h4>
-        <p>Launch what you prepared last round. The details are in <em>Attacks</em> below. An <em>SLBM</em> is prepared with a launch code like any weapon, so nobody can spot it, but when you launch it you may switch to another opponent's continent. If the continent on your launch code has been eliminated before you launch, everything on your Launchpad fizzles.</p>
+        <p>Launch what you prepared last round: choose an opponent's continent, then name a city on it. The details are in <em>Attacks</em> below. An <em>SLBM</em> looks like a decoy to anyone who peeks at your Launchpad.</p>
         <h4>Defend</h4>
         <p>When your Defend is revealed, you <strong>must</strong> play a shield card from your hand into your Shield slot. It covers your whole continent until the end of the round. If nobody attacks you, it's wasted.</p>
-        <p><strong>Shields stay put:</strong> every shield you play stays in your Shield slot until the end of the round, even once it has done its job, and is discarded during cleanup. A shield that blocks one attack is simply used up after that block. This includes an <em>Interceptor</em> played for someone else: it goes in your own Shield slot.</p>
+        <p><strong>Shields stay put:</strong> every shield you play stays in your Shield slot until the end of the round, even once it has done its job, and is discarded at the end of the round. A shield that blocks one attack is simply used up after that block. This includes an <em>Interceptor</em> played for someone else: it goes in your own Shield slot.</p>
         <p><strong>Interrupt:</strong> if your face-down action is Defend and someone attacks you, you <strong>must</strong> reveal it immediately, out of turn, right after their weapon is revealed, and raise a shield. You know what's incoming, so you can pick the right shield. You then skip your Defend on your normal turn. A raised shield always takes the first attack that comes in: you can never let an attack through to save your shield for a later one.</p>
         <div class="tip"><b>Why no choice?</b><p>There's no time to judge. Your army shoots at the first thing it sees coming.</p></div>
         <p>You may only plan Defend if you hold a shield card. Bluff out loud as much as you like, but the cards have to back you up.</p>
+        <h4>Pass</h4>
+        <p>Do nothing this round. Pass is an action card like the others: it moves to your Locked slot at the end of the round, and a prepared card fizzles when you reveal it. Use it when nothing else is worth it, or to keep a stronger action free for next round.</p>
       </section>
 
       <section id="s-attack">
         <p class="kicker">06</p>
         <h3>Attacks</h3>
         <ol class="steps">
-          <li><b>Reveal and name the city</b>Turn over your launch code and your prepared card together, and name any city on that continent that still has population cubes: <em>"Europe, Paris!"</em> The city numbers on the map are only there for quick reference. With more than one card on your Launchpad, they all fire at the same target, each as a separate attack: one Missile Defence stops only one of them. If an earlier one turns that city into a crater, the rest are wasted (the Clock still moves).</li>
+          <li><b>Choose the target</b>Turn over your prepared card, choose an opponent's continent and name any city on it that still has population cubes: <em>"Europe, Paris!"</em> The city numbers on the map are only there for quick reference. Anyone holding <em>Deepfake</em> may now change the continent. With more than one card on your Launchpad, they all fire at the same city, each as a separate attack: one Missile Defence stops only one of them. If an earlier one turns that city into a crater, the rest are wasted (the Clock still moves).</li>
           <li><b>The target interrupts</b>If the target's face-down action is Defend, they must reveal it now and raise a shield.</li>
           <li><b>Resolve</b>The weapon hits the city you named. Nobody can change it unless a card says so. If the target has an active shield, the attack is blocked, unless the weapon ignores shields. Otherwise remove the weapon's damage in population cubes. Overkill is wasted.</li>
           <li><b>Move the Clock</b>Move it forward by the weapon's Clock value, even if the attack was blocked or hit nothing.</li>
-          <li><b>Discard</b>Discard the weapon and take your launch code back.</li>
+          <li><b>Discard</b>Discard the weapon.</li>
         </ol>
         <h4>Craters</h4>
         <ul>
@@ -503,33 +506,33 @@
       <section id="s-example">
         <p class="kicker">07</p>
         <h3>Example: two rounds on your board</h3>
-        <p>You play Europe. Your player board has six card slots in one row: <em>Action</em>, <em>Previous Action</em>, <em>Launchpad</em>, <em>Shield</em> and two <em>Upgrade</em> slots.</p>
+        <p>You play Europe. Your player board has five card slots in one row: <em>Action</em>, <em>Locked</em>, <em>Launchpad</em>, <em>Shield</em> and <em>Upgrade</em>.</p>
         <h4>A. Prepare, then Attack</h4>
         <ol class="steps">
-          <li><b>Round 1, Plan</b>Put <em>Prepare</em> face down in your Action slot. Your other four action cards stay in your hand.</li>
-          <li><b>Round 1, your turn</b>Flip Prepare. Put an ICBM from your hand and your North America launch code face down in your Launchpad slot. Everyone sees something is armed, but not what or at whom.</li>
-          <li><b>Round 1, end</b>Prepare moves to your Previous Action slot, so you can't Prepare in round 2.</li>
+          <li><b>Round 1, Plan</b>Put <em>Prepare</em> face down in your Action slot. Your other five action cards stay in your hand.</li>
+          <li><b>Round 1, your turn</b>Flip Prepare. Put an ICBM from your hand face down in your Launchpad slot. Everyone sees something is armed, but not what.</li>
+          <li><b>Round 1, end</b>Prepare moves to your Locked slot, so you can't Prepare in round 2.</li>
           <li><b>Round 2, Plan</b>Put <em>Attack</em> face down in your Action slot.</li>
-          <li><b>Round 2, your turn</b>Flip Attack, then the launch code and the ICBM, and name the city: "North America, New York!" If North America planned Defend, it must reveal it now and raise a shield. If not, New York loses 4 population cubes and the Clock moves +2. Discard the ICBM and take your launch code back.</li>
-          <li><b>Round 2, end</b>Take Prepare back into your hand. Attack moves to your Previous Action slot.</li>
+          <li><b>Round 2, your turn</b>Flip Attack, then the ICBM, and name the target: "North America, New York!" If North America planned Defend, it must reveal it now and raise a shield. If not, New York loses 4 population cubes and the Clock moves +2. Discard the ICBM.</li>
+          <li><b>Round 2, end</b>Take Prepare back into your hand. Attack moves to your Locked slot.</li>
         </ol>
         <div class="tip"><b>If you don't attack in round 2</b><p>When you flip any other action, the ICBM fizzles: discard it. A decoy is used exactly this way, on purpose.</p></div>
         <h4>B. Defending</h4>
         <ol class="steps">
           <li><b>Round 1</b>An opponent prepares. A card appears on their Launchpad.</li>
           <li><b>Round 2, Plan</b>You hold a shield, so you put <em>Defend</em> face down in your Action slot.</li>
-          <li><b>Round 2, attacker first</b>They flip Attack and their launch code: "Europe, London!" You flip Defend immediately, out of turn, and put a Missile Defence from your hand in your Shield slot. The attack is blocked. The Missile Defence stays in your Shield slot, used up, until the end of the round. Your Defend is used up too.</li>
+          <li><b>Round 2, attacker first</b>They flip Attack and their weapon: "Europe, London!" You flip Defend immediately, out of turn, and put a Missile Defence from your hand in your Shield slot. The attack is blocked. The Missile Defence stays in your Shield slot, used up, until the end of the round. Your Defend is used up too.</li>
           <li><b>Round 2, you first</b>On your turn, flip Defend and put the shield in your Shield slot. It protects your whole continent for the rest of the round.</li>
-          <li><b>Round 2, end</b>Discard any shield still in your Shield slot. Defend moves to your Previous Action slot: you can't Defend in round 3, and everyone can see that. If nobody attacked you, that shield and that turn were wasted.</li>
+          <li><b>Round 2, end</b>Discard any shield still in your Shield slot. Defend moves to your Locked slot: you can't Defend in round 3, and everyone can see that. If nobody attacked you, that shield and that turn were wasted.</li>
         </ol>
         <h4>Where cards sit</h4>
         <div class="tw"><table>
-          <thead><tr><th>Moment</th><th>Action slot</th><th>Launchpad + Code</th><th>Shield slot</th></tr></thead>
+          <thead><tr><th>Moment</th><th>Action slot</th><th>Launchpad</th><th>Shield slot</th></tr></thead>
           <tbody>
             <tr><td class="k">Round 1, Plan</td><td>Prepare, face down</td><td>empty</td><td>empty</td></tr>
-            <tr><td class="k">Round 1, your turn</td><td>Prepare, face up</td><td>weapon and code, face down</td><td>empty</td></tr>
-            <tr><td class="k">Round 2, Plan</td><td>Attack or Defend, face down</td><td>weapon and code</td><td>empty</td></tr>
-            <tr><td class="k">Round 2, Attack</td><td>Attack, face up</td><td>code and weapon flipped, then discarded</td><td>&mdash;</td></tr>
+            <tr><td class="k">Round 1, your turn</td><td>Prepare, face up</td><td>weapon, face down</td><td>empty</td></tr>
+            <tr><td class="k">Round 2, Plan</td><td>Attack or Defend, face down</td><td>weapon, face down</td><td>empty</td></tr>
+            <tr><td class="k">Round 2, Attack</td><td>Attack, face up</td><td>weapon flipped, then discarded</td><td>&mdash;</td></tr>
             <tr><td class="k">Round 2, Defend</td><td>Defend, face up</td><td>a prepared card of yours fizzles</td><td>shield, until the end of the round</td></tr>
           </tbody>
         </table></div>
@@ -539,8 +542,8 @@
         <p class="kicker">08</p>
         <h3>The Doomsday Clock</h3>
         <p>The Clock counts minutes to midnight. It only moves when weapons are launched: each one moves it by its <strong>Clock value</strong>. No nukes, no midnight.</p>
-        <div class="clock" id="clock" aria-label="Doomsday Clock track from 30 to midnight"></div>
-        <p class="clockkey">Half an hour to midnight. Starting positions: <b>30</b> for 4 players &middot; <b>27</b> for 3 &middot; <b>22</b> for 2. Red square is midnight.</p>
+        <div class="clock" id="clock" aria-label="Doomsday Clock track from 32 to midnight"></div>
+        <p class="clockkey">About half an hour to midnight. Starting positions: <b>32</b> for 5 players &middot; <b>30</b> for 4 &middot; <b>27</b> for 3 &middot; <b>22</b> for 2. Red square is midnight.</p>
         <p>Some Build cards turn the Clock back, such as <em>Peace Treaty</em> (5 minutes). The Clock never goes above its starting position.</p>
         <p>Conventional weapons have Clock <strong>+0</strong>. A player who is behind wants a long game and fights with them. The leader wants the game over and reaches for nukes.</p>
         <p>A nuke sent back by <em>Return to Sender</em> does not move the Clock again. It's the same bomb.</p>
@@ -634,9 +637,27 @@
         <ol>
           <li><b>Tokens:</b> fallout (about 40) and the first player token are not printed yet; coins, beads or small markers that cover one cube spot work for a first test.</li>
           <li><b>Clock pace.</b> In simulated 4-player games the Clock moves about 0.7 minutes per round, so midnight comes around round 33, far beyond a 60-minute game. Peace Treaty alone winds back about 10 minutes per game.</li>
-          <li><b>Playtest.</b> All numbers wait for a first game.</li>        </ol>
+          <li><b>Playtest.</b> All numbers wait for a first game.</li>
+          <li><b>Defend face down until attacked?</b> Proposed: a planned Defend stays hidden until the first attack on you or the end of the round. Problem: a face-down card that is never flipped in turn gives itself away as a Defend. Not adopted yet; Defend still reveals in turn order.</li>
+          <li><b>South America</b> is new and untested: its numbers (cities, trait) are first guesses.</li>        </ol>
       </article>
     </div>
+  </section>
+  <section>
+    <h2>Reprint for 0.10.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 1</td><td>SLBM (both copies)</td></tr>
+        <tr><td class="k">Build 2</td><td>Spy Satellite (both); every upgrade (Extra Silo, Early Warning, Fallout Shelters, Spin Doctors, Nuclear Sub, Doomsday Bunker, Shield Network): "your Upgrade slot", Extra Silo "same continent"</td></tr>
+        <tr><td class="k">Propaganda</td><td>Deepfake</td></tr>
+        <tr><td class="k">Player boards</td><td>All five: one row of five slots (Action, Locked, Launchpad, Shield, Upgrade); Europe and North America trait texts; South America is new</td></tr>
+        <tr><td class="k">Action cards</td><td>A Pass card for every player, and South America's six</td></tr>
+        <tr><td class="k">Helper cards</td><td>All, both sides (no launch codes, Locked, Pass, hand limit, five continents); a fifth set for South America</td></tr>
+        <tr><td class="k">Game board</td><td>South America added, North America moved up, Clock with 32 spots and a start spot for 5 players</td></tr>
+        <tr><td class="k">Launch codes</td><td>Retired: no longer used</td></tr>
+      </tbody>
+    </table></div>
   </section>
   <section>
     <h2>Reprint for 0.9.1</h2>
@@ -666,22 +687,34 @@
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
       <tbody>
-        <tr><td class="k">Player boards</td><td>4 boards, about 322 &times; 106 mm, two per A3 sheet (layers <em>Board - North America</em>, <em>Board - Europe</em>, <em>Board - Asia</em>, <em>Board - Africa</em>, page 1). Show North America and Europe together for the first sheet, Asia and Africa for the second.</td></tr>
+        <tr><td class="k">Player boards</td><td>5 boards, two per A3 sheet (layers <em>Board - North America</em>, <em>Board - Europe</em>, <em>Board - Asia</em>, <em>Board - Africa</em>, <em>Board - South America</em>, page 1). Show North America and Europe together for the first sheet, Asia and Africa for the second, South America alone for the third.</td></tr>
         <tr><td class="k">Build 1</td><td>Cards 1&ndash;36: weapons, decoys and the Missile Defences, 4 rows of 9 on A3 (layer <em>Build 1</em>, page 1)</td></tr>
         <tr><td class="k">Build 2</td><td>Cards 37&ndash;72: the other shields, specials and upgrades (layer <em>Build 2</em>, page 1)</td></tr>
         <tr><td class="k">Build (Back)</td><td>Page 2. Print it behind each Build sheet; every Build back is the same.</td></tr>
         <tr><td class="k">Propaganda</td><td>All 29 Propaganda cards (layer <em>Propaganda</em>, page 1)</td></tr>
         <tr><td class="k">Propaganda (Back)</td><td>Page 2, layer <em>Propaganda (Back)</em></td></tr>
-        <tr><td class="k">Helper cards</td><td>16 poker cards (63 &times; 89 mm), 4 per player, layer <em>Helper Cards</em> on page 1. Print <em>Helper Cards (Back)</em> on page 2 behind it: these are the second sides, not a shared back.</td></tr>
+        <tr><td class="k">Helper cards</td><td>Poker cards (63 &times; 89 mm), 4 per player, layer <em>Helper Cards</em> on page 1. Print <em>Helper Cards (Back)</em> on page 2 behind it: these are the second sides, not a shared back.</td></tr>
         <tr><td class="k">Game board</td><td>The world map, its own file <em>Gameboard.af</em> (A2, 594 &times; 420 mm, no back). For playtests, print it on two A3 sheets that meet in the middle; no city box crosses that seam. The final version goes on one A2 sheet.</td></tr>
-        <tr><td class="k">Action cards</td><td>20 Mini-Euro cards, one row of 5 per player, layer <em>Action Cards</em> on page 1, with <em>Action Cards (Back)</em> on page 2 behind it.</td></tr>
-        <tr><td class="k">Launch codes</td><td>12 Mini-Euro cards, three per player, layer <em>Launch Code Cards</em> on page 1, with <em>Launch Code Cards (Back)</em> on page 2 behind it.</td></tr>
+        <tr><td class="k">Action cards</td><td>30 Mini-Euro cards, 6 per player, layer <em>Action Cards</em> on page 1, with <em>Action Cards (Back)</em> on page 2 behind it.</td></tr>
       </tbody>
     </table></div>
   </section>
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.10.0</p><p class="vt">Clean table</p></div>
+        <ul>
+          <li><b>Five players:</b> <b>South America</b> joins (Bogot&aacute;, Lima, S&atilde;o Paulo, Buenos Aires; 20 Population) with <b>Commodity Boom</b>: when it Builds, it draws 3 cards and keeps 2. With 5 players the Clock starts at 32.</li>
+          <li><b>No more launch codes.</b> Prepare puts only the card face down; Attack chooses the continent and the city at launch. The launch code cards are retired.</li>
+          <li><b>Europe: Intelligence Services</b> looks at the card another player puts on their Launchpad when they Prepare (once per round). <b>Spy Satellite</b> shows all cards on one Launchpad. <b>SLBM</b> hits for 3 and looks like a decoy to anyone who peeks. <b>Deepfake</b>: when any weapon is launched, you pick the continent it goes to (not your own); the attacker names the city.</li>
+          <li><b>Pass</b> is a sixth action card: do nothing this round. It counts for the Locked slot like any other action.</li>
+          <li><b>Previous Action is now called Locked.</b> The cleanup step is simply the <b>end of the round</b>: shields are discarded and the action cards move to Locked.</li>
+          <li><b>Hand limit 5, at all times:</b> when a card would be your sixth, discard any one of the six. No discarding at the end of the round.</li>
+          <li><b>One Upgrade slot.</b> Drawing an upgrade with the slot taken, or two at once, you keep one and discard the rest. Player boards have five slots in one row: Action, Locked, Launchpad, Shield, Upgrade.</li>
+          <li>All of these rules are the same in the digital game, which now plays like the table.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.9.1</p><p class="vt">Eyes in the sky</p></div>
         <ul>
@@ -896,17 +929,20 @@
 /* ============ data ============ */
 const CONTINENTS = [
   {k:"na", n:"North America", c:"var(--p-na)", tag:"Balanced",
-   tr:["American Exceptionalism", "You may play the same action two rounds in a row: take your action card back at cleanup."],
+   tr:["American Exceptionalism", "You may play the same action two rounds in a row: take your action card back at the end of the round."],
    cities:[["Vancouver",4],["New York",6],["Los Angeles",5],["Mexico City",5]]},
   {k:"eu", n:"Europe", c:"var(--p-eu)", tag:"Many small cities, hard to hurt badly",
-   tr:["Intelligence Services", "Once per round, when another player Prepares, look at their launch code."],
+   tr:["Intelligence Services", "Once per round, when another player Prepares, look at the card they put on their Launchpad."],
    cities:[["London",4],["Berlin",4],["Paris",3],["Moscow",3],["Madrid",3],["Rome",3]]},
   {k:"as", n:"Asia", c:"var(--p-as)", tag:"Megacities, big targets",
    tr:["Hardened Megacities", "When a nuke would deal 3 or more damage to one of your cities, it deals 1 less."],
    cities:[["Tokyo",7],["Shanghai",8],["Mumbai",5]]},
   {k:"af", n:"Africa", c:"var(--p-af)", tag:"The youngest, fastest-growing population",
    tr:["Bounce Back", "Every time you lose a city, put 1 population cube from the supply on another of your cities."],
-   cities:[["Cairo",4],["Lagos",5],["Kinshasa",4],["Nairobi",3],["Johannesburg",4]]}
+   cities:[["Cairo",4],["Lagos",5],["Kinshasa",4],["Nairobi",3],["Johannesburg",4]]},
+  {k:"sa", n:"South America", c:"var(--p-sa)", tag:"Two giant cities and the commodities to feed them",
+   tr:["Commodity Boom", "When you Build, draw 3 cards and keep 2."],
+   cities:[["Bogotá",4],["Lima",4],["São Paulo",6],["Buenos Aires",6]]}
 ];
 
 const CATS = {
@@ -943,7 +979,7 @@ const PROPAGANDA = [
   {n:"Fast Food Franchise", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1) + " The target discards 1 random card.", fl:"Would you like freedom with that?"},
   {n:"Hot Mic", t:"backfire", q:1, tx:"Backfire. Show your hand to every player.", fl:"Is this thing on?"},
   {n:"Censorship", t:"trick", q:1, tx:KEEP + "Play it when another player's Propaganda card targets you: resolve it as if you drew it, aimed at them.", fl:"Nothing to see here."},
-  {n:"Deepfake", t:"trick", q:1, tx:KEEP + "Play it when a launch code is revealed: change its continent (not to your own).", fl:"Seeing is no longer believing."},
+  {n:"Deepfake", t:"trick", q:1, tx:KEEP + "Play it when any weapon is launched: you pick the continent it goes to (not your own); the attacker names the city.", fl:"Seeing is no longer believing."},
   {n:"Whistleblower", t:"trick", q:1, tx:KEEP + "Play it at any time: look at one prepared card. You may show it to everyone.", fl:"Leaks are a public service."},
   {n:"Sleeper Agent", t:"trick", q:1, tx:KEEP + "Play it on your turn: take 1 population cube from a player who attacked you last round.", fl:"Activated by a postcard."},
   {n:"Rewrite History", t:"trick", q:1, tx:"Play it now: shuffle this card and the Propaganda discard pile into the deck, then draw another Propaganda card and resolve it.", fl:"It was always like this."}
@@ -960,7 +996,7 @@ const BUILD = [
   {n:"MIRV", t:"weapon", q:2, dmg:"1", dl:"EACH CITY", clk:"+2", tx:"Hits every city on the target continent for 1.", fl:"Why choose?"},
   {n:"Fallout Bomb", t:"weapon", q:1, dmg:"2", clk:"+2", tx:"Hits the target city for 2. Every other city on that continent gets 2 fallout.", fl:"Shares generously with the neighbours."},
   {n:"Tsar Bomba", t:"weapon", q:1, dmg:"5", clk:"+3", tx:"Hits the target city for 5.", fl:"50 megatons of overcompensation."},
-  {n:"SLBM", t:"weapon", q:2, dmg:"3", clk:"+2", tx:"Prepare it as usual. When you launch, you may switch to any other opponent's continent.", fl:"Somewhere under the Atlantic."},
+  {n:"SLBM", t:"weapon", q:2, dmg:"3", clk:"+2", tx:"Hits the target city for 3. Anyone who looks at your Launchpad sees it as a decoy.", fl:"Somewhere under the Atlantic."},
   {n:"Hypersonic Nuke", t:"weapon", q:1, dmg:"3", clk:"+2", tx:"Hits the target city for 3. Ignores shields.", fl:"Too fast to argue with."},
   {n:"Dirty Bomb", t:"weapon", q:1, dmg:"1", clk:"+1", tx:"Hits the target city for 1 and leaves 3 fallout.", fl:"The gift that keeps on giving."},
   {n:"Carpet Bombing", t:"weapon", q:2, dmg:"1+1", clk:"0", tx:"Not nuclear. Hits two cities of your choice on the target continent for 1 each.", fl:"Thorough, not precise."},
@@ -974,20 +1010,20 @@ const BUILD = [
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it from your hand when any player is attacked, even out of turn and without Defend: block that attack.", fl:"Friends in high orbits."},
   {n:"Civil Defence", t:"shield", q:3, boxes:[["3","MOVE"]], tx:"Doesn't block. When you play it, move up to 3 of your population cubes between your own cities.", fl:"Duck, cover, and relocate."},
   {n:"Budget Increase", t:"special", q:2, tx:"Draw 2 Build cards.", fl:"The schools can wait."},
-  {n:"Spy Satellite", t:"special", q:2, tx:"Look at all cards on one player's Launchpad, including the launch code.", fl:"Smile."},
+  {n:"Spy Satellite", t:"special", q:2, tx:"Look at all cards on one player's Launchpad.", fl:"Smile."},
   {n:"Reconstruction", t:"special", q:1, tx:"Put 2 population cubes from the supply on one of your cities that isn't a crater, or remove 1 fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:1, tx:"Choose a card from your hand and swap it with a random card from another player's hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 5 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
   {n:"Arms Race", t:"special", q:1, tx:"Every player draws 1 Build card. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
   {n:"Sabotage", t:"special", q:1, tx:"Choose a prepared card on another player's launchpad: it fizzles and they discard it.", fl:"Someone loosened a bolt."},
   {n:"Five-Year Plan", t:"special", q:2, tx:"Shuffle this card and the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
-  {n:"Extra Silo", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same target, as separate attacks.", fl:"Twice the deterrence."},
-  {n:"Early Warning", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
-  {n:"Fallout Shelters", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
-  {n:"Spin Doctors", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
-  {n:"Nuclear Sub", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
-  {n:"Doomsday Bunker", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
-  {n:"Shield Network", t:"upgrade", q:2, tx:"When you draw this, put it in an Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
+  {n:"Extra Silo", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same continent, as separate attacks.", fl:"Twice the deterrence."},
+  {n:"Early Warning", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
+  {n:"Fallout Shelters", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
+  {n:"Spin Doctors", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
+  {n:"Nuclear Sub", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
+  {n:"Doomsday Bunker", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
+  {n:"Shield Network", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
 ];
 
 /* ============ view switching, with a bookmarkable #token per tab ============ */
@@ -1029,9 +1065,9 @@ if ("IntersectionObserver" in window) {
 }
 
 /* ---- the Clock track ---- */
-document.getElementById("clock").innerHTML = Array.from({length:31}, (_, i) => {
-  const m = 30 - i;
-  const cls = m === 0 ? "mid" : [30,27,22].includes(m) ? "st" : "";
+document.getElementById("clock").innerHTML = Array.from({length:33}, (_, i) => {
+  const m = 32 - i;
+  const cls = m === 0 ? "mid" : [32,30,27,22].includes(m) ? "st" : "";
   return '<i class="' + cls + '">' + (m === 0 ? "0" : m) + "</i>";
 }).join("");
 
