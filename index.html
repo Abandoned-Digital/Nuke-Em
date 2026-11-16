@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.10.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.10.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -650,6 +650,7 @@
       <tbody>
         <tr><td class="k">Build 1</td><td>SLBM (both copies)</td></tr>
         <tr><td class="k">Build 2</td><td>Spy Satellite (both); every upgrade (Extra Silo, Early Warning, Fallout Shelters, Spin Doctors, Nuclear Sub, Doomsday Bunker, Shield Network): "your Upgrade slot", Extra Silo "same continent"</td></tr>
+        <tr><td class="k">Build 2 (0.10.1)</td><td>No reprint: the second copies of the upgrades and of Five-Year Plan are gone, the rest moved up (cards 37&ndash;64)</td></tr>
         <tr><td class="k">Propaganda</td><td>Deepfake</td></tr>
         <tr><td class="k">Player boards</td><td>All five: one row of five slots (Action, Locked, Launchpad, Shield, Upgrade); Europe and North America trait texts; South America is new</td></tr>
         <tr><td class="k">Action cards</td><td>A Pass card for every player, and South America's six</td></tr>
@@ -702,6 +703,12 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.10.1</p><p class="vt">One of each</p></div>
+        <ul>
+          <li><b>One copy of each upgrade</b> and <b>one Five-Year Plan</b>: the Build deck drops from 72 to 64 cards. Take the second copies out of the deck.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.10.0</p><p class="vt">Clean table</p></div>
         <ul>
@@ -1016,14 +1023,14 @@ const BUILD = [
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 5 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
   {n:"Arms Race", t:"special", q:1, tx:"Every player draws 1 Build card. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
   {n:"Sabotage", t:"special", q:1, tx:"Choose a prepared card on another player's launchpad: it fizzles and they discard it.", fl:"Someone loosened a bolt."},
-  {n:"Five-Year Plan", t:"special", q:2, tx:"Shuffle this card and the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
-  {n:"Extra Silo", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same continent, as separate attacks.", fl:"Twice the deterrence."},
-  {n:"Early Warning", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
-  {n:"Fallout Shelters", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
-  {n:"Spin Doctors", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
-  {n:"Nuclear Sub", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
-  {n:"Doomsday Bunker", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
-  {n:"Shield Network", t:"upgrade", q:2, tx:"When you draw this, put it in your Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
+  {n:"Five-Year Plan", t:"special", q:1, tx:"Shuffle this card and the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
+  {n:"Extra Silo", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same continent, as separate attacks.", fl:"Twice the deterrence."},
+  {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
+  {n:"Fallout Shelters", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
+  {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
+  {n:"Nuclear Sub", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Your prepared cards may wait one extra round before they fizzle.", fl:"Patient. Silent. Damp."},
+  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
+  {n:"Shield Network", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
 ];
 
 /* ============ view switching, with a bookmarkable #token per tab ============ */
