@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.11.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.12.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -644,6 +644,18 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.12.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 1</td><td>Iron Curtain, Return to Sender and Interceptor moved over (30&ndash;36): reprint the whole sheet</td></tr>
+        <tr><td class="k">Build 2</td><td>Whole sheet: cards 37&ndash;69 with the eight new specials and Doomsday Bunker (+2)</td></tr>
+        <tr><td class="k">Propaganda</td><td>Olympic Gold, and the five new cards (30&ndash;34)</td></tr>
+        <tr><td class="k">World map</td><td>S&atilde;o Paulo, Tokyo and Lagos boxes moved</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.11.0</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -716,6 +728,16 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.12.0</p><p class="vt">Bigger deck, sharper news</p></div>
+        <ul>
+          <li><b>Five new specials</b> (8 cards): <b>Recon Flight</b> (2, look at a hand), <b>Codebreakers</b> (2, look at the top 3 Build cards and take 1), <b>War Bonds</b> (2, draw 1 plus 1 for each of your damaged cities), <b>Missile Recall</b> (take a prepared card back) and <b>Disarmament Talks</b> (every Launchpad is emptied, the Clock goes back 1). The Build deck grows to 69 cards.</li>
+          <li><b>Four new Propaganda cards</b> (5 cards): <b>State TV Blooper</b> (2) and <b>Bread Lines</b> backfire with a cube, <b>Exposed Spy Ring</b> backfires with a card, <b>Defecting Scientist</b> wins you a card. Propaganda was the strongest action; with more Backfires it is a real gamble again.</li>
+          <li><b>Olympic Gold</b> only takes from opponents who have more population than you: a catch-up card instead of the strongest card in the deck.</li>
+          <li><b>Doomsday Bunker</b> adds 2 at midnight instead of 3.</li>
+          <li>Card sheets: Build 1 now holds cards 1&ndash;36 (all weapons and every shield but Civil Defence), Build 2 cards 37&ndash;69, Propaganda cards 1&ndash;34.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.11.0</p><p class="vt">No bluffing, fewer cities</p></div>
         <ul>
@@ -1006,10 +1028,14 @@ const PROPAGANDA = [
   {n:"Hacked Guidance", t:"trick", q:1, tx:KEEP + "Play it when a weapon is launched at you: give it a new target on any continent, following that weapon's own rules.", fl:"Have you tried turning it off and on?"},
   {n:"Counter-Propaganda", t:"trick", q:1, tx:KEEP + "Play it when another player's Propaganda card targets you: cancel it.", fl:"No, you are."},
   {n:"Double Agent", t:"trick", q:1, tx:KEEP + "Play it at any time: look at another player's hand.", fl:"Works for everyone. Loyal to none."},
-  {n:"Olympic Gold", t:"success", q:1, boxes:[["1","FROM EACH"]], tx:"Take 1 population cube from one city of every opponent and put them on your cities.", fl:"Gold, silver, and your citizens."},
+  {n:"Olympic Gold", t:"success", q:1, boxes:[["1","EACH AHEAD"]], tx:"Take 1 population cube from one city of every opponent who has more population cubes than you, and put them on your cities.", fl:"Gold, silver, and your citizens."},
   {n:"Pop Star Tour", t:"success", q:2, boxes:[["1","CUBES"]], tx:"Take 1 population cube from the target's biggest city and put it on one of your cities.", fl:"Sold out in every capital."},
   {n:"Fast Food Franchise", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1) + " The target discards 1 random card.", fl:"Would you like freedom with that?"},
   {n:"Hot Mic", t:"backfire", q:1, tx:"Backfire. Show your hand to every player.", fl:"Is this thing on?"},
+  {n:"State TV Blooper", t:"backfire", q:2, boxes:[["-1","CUBE", " clk"]], tx:DEFECT(1), fl:"Live, unfortunately."},
+  {n:"Bread Lines", t:"backfire", q:1, boxes:[["-1","CUBE", " clk"]], tx:"Backfire. Remove 1 population cube from your biggest city and put it back in the supply.", fl:"Queue here for the future."},
+  {n:"Exposed Spy Ring", t:"backfire", q:1, boxes:[["-1","CARD", " clk"]], tx:"Backfire. The target looks at your hand and takes 1 card from it.", fl:"The moustaches were fake."},
+  {n:"Defecting Scientist", t:"success", q:1, boxes:[["1","CARD"]], tx:"The target gives you 1 random card from their hand.", fl:"Brought his notes. And his cat."},
   {n:"Censorship", t:"trick", q:1, tx:KEEP + "Play it when another player's Propaganda card targets you: resolve it as if you drew it, aimed at them.", fl:"Nothing to see here."},
   {n:"Deepfake", t:"trick", q:1, tx:KEEP + "Play it when any weapon is launched: you pick the continent it goes to (not your own); the attacker names the city.", fl:"Seeing is no longer believing."},
   {n:"Whistleblower", t:"trick", q:1, tx:KEEP + "Play it at any time: look at one prepared card. You may show it to everyone.", fl:"Leaks are a public service."},
@@ -1044,12 +1070,17 @@ const BUILD = [
   {n:"Arms Race", t:"special", q:2, tx:"You draw 2 Build cards, every other player draws 1. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
   {n:"Sabotage", t:"special", q:1, tx:"Choose a prepared card on another player's launchpad: it fizzles and they discard it.", fl:"Someone loosened a bolt."},
   {n:"Black Market", t:"special", q:2, tx:"Take the top card of the Build discard pile. If the pile is empty, draw 1 Build card instead.", fl:"No receipts. No questions."},
+  {n:"Recon Flight", t:"special", q:2, tx:"Look at another player's hand.", fl:"Smile for the camera."},
+  {n:"Codebreakers", t:"special", q:2, tx:"Look at the top 3 cards of the Build deck. Take 1 into your hand and put the others on the bottom of the deck.", fl:"Enigma was the easy one."},
+  {n:"War Bonds", t:"special", q:2, tx:"Draw 1 Build card, plus 1 more for each of your cities below its starting population (3 cards at most).", fl:"Buy now, rebuild later."},
+  {n:"Missile Recall", t:"special", q:1, tx:"Take a card from your Launchpad back into your hand.", fl:"Return to base. Quietly."},
+  {n:"Disarmament Talks", t:"special", q:1, tx:"Every player discards all cards on their Launchpad. Turn the Doomsday Clock back 1 minute (never past its start).", fl:"Everyone puts their toys away."},
   {n:"Five-Year Plan", t:"special", q:1, tx:"When you draw this, shuffle this card and the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
   {n:"Extra Silo", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same continent, as separate attacks.", fl:"Twice the deterrence."},
   {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
   {n:"Fallout Shelters", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
   {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
-  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 3 to your score.", fl:"Snacks for a decade."},
+  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 2 to your score.", fl:"Snacks for a decade."},
   {n:"Shield Network", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. When you play Defend, you may play 1 extra shield card.", fl:"Overlapping fields of hope."}
 ];
 
