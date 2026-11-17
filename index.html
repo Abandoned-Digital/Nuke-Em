@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.12.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.13.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -430,7 +430,7 @@
         <ol class="steps">
           <li><b>Plan, all at once</b>Everyone plans at the same time and in secret; there is no turn order in this step. Place one action card face down in your Action slot. It can't be the card in your Locked slot.</li>
           <li><b>Reveal and resolve, one by one</b>Starting with the first player and going clockwise, each player reveals their action and resolves it fully before the next player reveals.</li>
-          <li><b>End of round</b>Discard any shield in your Shield slot. Take the card in your Locked slot back into your hand, then move this round's action card from your Action slot to your Locked slot. Pass the first player token clockwise.</li>
+          <li><b>End of round</b>Discard any shield in your Shield slot. Take the card in your Locked slot back into your hand, then move this round's action card from your Action slot to your Locked slot (a Pass goes straight back into your hand instead). Pass the first player token clockwise.</li>
         </ol>
         <h4>Hand limit: 5, at all times</h4>
         <p>You never hold more than <strong>5</strong> Build and Propaganda cards (action cards don't count). Whenever a card would be your sixth, choose any one of the six and discard it, the new card included. There is no discarding at the end of the round.</p>
@@ -447,7 +447,7 @@
           <div><b>Defend</b><span>Raise a shield</span></div>
           <div><b>Pass</b><span>Do nothing</span></div>
         </div>
-        <p><strong>Never the same action twice in a row.</strong> The action card you played last round lies face up in your <strong>Locked</strong> slot, so you can't plan it this round. You choose from the other five. In round 1 the slot is empty. Everyone can see what you can't do: if you Defended last round, you can't Defend this round. The one exception is North America (<em>American Exceptionalism</em>): it has no Locked slot. At the end of the round it takes its action card straight back into its hand, so it always plans from all six.</p>
+        <p><strong>Never the same action twice in a row.</strong> The action card you played last round lies face up in your <strong>Locked</strong> slot, so you can't plan it this round. You choose from the other five. In round 1 the slot is empty. Everyone can see what you can't do: if you Defended last round, you can't Defend this round. Pass is never locked (see Pass below). The one exception is North America (<em>American Exceptionalism</em>): it has no Locked slot. At the end of the round it takes its action card straight back into its hand, so it always plans from all six.</p>
         <h4>Build</h4>
         <p>Draw <strong>2</strong> Build cards into your hand.</p>
         <p><strong>Specials</strong> (green Build cards) are played on your own turn, before or after your action, and don't cost an action.</p>
@@ -477,7 +477,7 @@
         <div class="tip"><b>Why no choice?</b><p>There's no time to judge. Your army shoots at the first thing it sees coming.</p></div>
         <p>You may only plan Defend if you hold a shield card. Bluff out loud as much as you like, but the cards have to back you up.</p>
         <h4>Pass</h4>
-        <p>Do nothing this round. Pass is an action card like the others: it moves to your Locked slot at the end of the round, and a prepared card fizzles when you reveal it. Use it when nothing else is worth it, or to keep a stronger action free for next round.</p>
+        <p>Do nothing this round. You plan Pass face down like any other action, and a prepared card fizzles when you reveal it. But Pass is never locked: at the end of the round it goes straight back into your hand, while your Locked card comes back as normal. So you can Pass two rounds in a row, and after a Pass nothing is locked: next round you plan from all six. Use it when nothing else is worth it, or to get every action back.</p>
       </section>
 
       <section id="s-attack">
@@ -644,6 +644,16 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.13.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 2</td><td>Card 70: Alpha Strike (new)</td></tr>
+        <tr><td class="k">Helper cards</td><td>Pass: never locked, it goes back into your hand</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.12.0</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -728,6 +738,13 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.13.0</p><p class="vt">Alpha Strike</p></div>
+        <ul>
+          <li><b>Alpha Strike</b> (1, special): play it on your turn to fire every weapon in your hand, one at a time, each resolved as normal (Clock, shields, Interceptor, Deepfake). Next round your action must be Pass. The Build deck grows to 70 cards.</li>
+          <li><b>Pass is never locked.</b> It goes straight back into your hand at the end of the round, and your Locked card still comes back: after a Pass nothing is locked, and you can Pass two rounds in a row.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.12.0</p><p class="vt">Bigger deck, sharper news</p></div>
         <ul>
@@ -1075,6 +1092,7 @@ const BUILD = [
   {n:"War Bonds", t:"special", q:2, tx:"Draw 1 Build card, plus 1 more for each of your cities below its starting population (3 cards at most).", fl:"Buy now, rebuild later."},
   {n:"Missile Recall", t:"special", q:1, tx:"Take a card from your Launchpad back into your hand.", fl:"Return to base. Quietly."},
   {n:"Disarmament Talks", t:"special", q:1, tx:"Every player discards all cards on their Launchpad. Turn the Doomsday Clock back 1 minute (never past its start).", fl:"Everyone puts their toys away."},
+  {n:"Alpha Strike", t:"special", q:1, tx:"Fire every weapon in your hand, one at a time. Next round your action must be Pass.", fl:"Why keep them for later?"},
   {n:"Five-Year Plan", t:"special", q:1, tx:"When you draw this, shuffle this card and the Build discard pile into the Build deck, then draw 2 Build cards.", fl:"This time it will work."},
   {n:"Extra Silo", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Prepare may put 1 more card on your Launchpad. Attack fires them all at the same continent, as separate attacks.", fl:"Twice the deterrence."},
   {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. At the start of each round, you may look at all cards on one player's Launchpad.", fl:"Beep."},
