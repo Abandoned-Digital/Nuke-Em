@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.15.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.15.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -446,7 +446,7 @@
           <div><b>Intel</b><span>Look at a hand, draw 1</span></div>
           <div><b>Pass</b><span>Do nothing</span></div>
         </div>
-        <p><strong>Never the same action twice in a row.</strong> Your <strong>tracker cube</strong> sits on the action you took last. On your turn you move it to the action you take now, and it may not stay where it is. Everyone can see what you can't do: if your cube is on Attack, you can't Attack this turn. The cube starts on Pass, and Pass is never locked (see Pass below). The one exception is North America (<em>American Exceptionalism</em>): its cube may stay where it is, so it always chooses from all six.</p>
+        <p><strong>Never the same action twice in a row.</strong> Your <strong>tracker cube</strong> sits on the action you took last. On your turn you move it to the action you take now, and it may not stay where it is. Everyone can see what you can't do: if your cube is on Attack, you can't Attack this turn. The cube starts on Pass, and Pass is never locked (see Pass below).</p>
         <h4>Build</h4>
         <p>Draw <strong>2</strong> Build cards into your hand.</p>
         <p><strong>Empty deck?</strong> When the Build or Propaganda deck runs out, at any moment (even halfway through a draw), shuffle its discard pile into a new face-down deck and keep drawing. Cards still on the old deck stay on top.</p>
@@ -618,6 +618,15 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.15.1</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Player boards</td><td>North America: trait Arsenal of Democracy (name and text); South America: the Commodity Boom trait text; Europe: trait Old Diplomacy (name and text)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.15.0</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -742,6 +751,14 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.15.1</p><p class="vt">Trait check</p></div>
+        <ul>
+          <li><b>North America: Arsenal of Democracy</b> replaces American Exceptionalism: <i>When you Prepare, also draw 1 Build card.</i> Since 0.15 every strike needs a Prepare first, so taking the same action twice in a row hardly ever helped: North America won 2 to 5 points under its fair share in simulation and the trait was worth about 1 point. With the new trait it lands near fair at every player count (52% / 35% / 25% / 19% for 2 to 5 players). North America no longer repeats actions: its tracker cube moves like everyone else&#39;s.</li>
+          <li><b>South America: Commodity Boom</b> now reads <i>When you Build, draw 3 Build cards instead of 2.</i> (it used to draw 3 and keep 2). In simulation South America won clearly less than its fair share (about 15% of 5-player games, fair is 20%); drawing 3 and keeping all of them brings it close to fair at every player count (49.5% / 32% / 22&ndash;25% / 19% for 2 to 5 players). Asia was checked too and is on target: its trait stays as it is.</li>
+          <li><b>Europe: Old Diplomacy</b> replaces Intelligence Services: <i>Propaganda against you takes at most 1 population cube.</i> Looking at an attacker&#39;s hand before blocking was worth almost nothing in simulation. The new trait blunts the big Propaganda steals and leaves Build and Intel as they are for everyone. Simulated win rates: 52% / 37% / 28% / 23% for 2 to 5 players, slightly above fair.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.15.0</p><p class="vt">Loaded and ready</p></div>
         <ul>
@@ -1038,10 +1055,10 @@
 /* ============ data ============ */
 const CONTINENTS = [
   {k:"na", n:"North America", c:"var(--p-na)", tag:"Balanced",
-   tr:["American Exceptionalism", "Your tracker may stay where it is: you may take the same action two rounds in a row."],
+   tr:["Arsenal of Democracy", "When you Prepare, also draw 1 Build card."],
    cities:[["Los Angeles",5],["New York",6],["Mexico City",5]]},
   {k:"eu", n:"Europe", c:"var(--p-eu)", tag:"Many small cities, hard to hurt badly",
-   tr:["Intelligence Services", "Once per round, when another player attacks you, look at their hand before you block."],
+   tr:["Old Diplomacy", "Propaganda against you takes at most 1 population cube."],
    cities:[["London",4],["Berlin",3],["Paris",3],["Moscow",3],["Rome",3]]},
   {k:"as", n:"Asia", c:"var(--p-as)", tag:"Megacities, big targets",
    tr:["Hardened Megacities", "When a nuke would deal 3 or more damage to one of your cities, it deals 1 less."],
@@ -1050,7 +1067,7 @@ const CONTINENTS = [
    tr:["Bounce Back", "Every time you lose a city, put 1 population cube from the supply on another of your cities."],
    cities:[["Cairo",4],["Lagos",5],["Nairobi",3],["Johannesburg",4]]},
   {k:"sa", n:"South America", c:"var(--p-sa)", tag:"Two giant cities and the commodities to feed them",
-   tr:["Commodity Boom", "When you Build, draw 3 cards and keep 2."],
+   tr:["Commodity Boom", "When you Build, draw 3 Build cards instead of 2."],
    cities:[["Bogotá",4],["São Paulo",6],["Buenos Aires",6]]}
 ];
 
