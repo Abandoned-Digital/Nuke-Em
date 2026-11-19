@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.15.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.15.2 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -418,7 +418,7 @@
           <li><b>Lay out the game board</b>Put the world map in the middle of the table, where everyone can reach it.</li>
           <li><b>Take a continent</b>Take its player board and put it in front of you. On the world map, fill every solid square of your continent's cities with population cubes of your colour; the dashed rows stay empty. Put your tracker cube on Pass. Your continent's special trait is printed on your player board and applies all game.</li>
           <li><b>Shuffle the decks</b>Shuffle the Build and Propaganda decks separately and put each face down on its spot on the game board. Each discard pile lies face up next to the board, beside its deck. Whenever a deck runs out, during setup too, shuffle its discard pile and put it face down as the new deck.</li>
-          <li><b>Deal hands</b>Deal each player 3 Build cards. An upgrade among them goes straight into your Upgrade slot (see <em>Build</em>).</li>
+          <li><b>Deal hands</b>Deal each player 3 Build cards. You may put an upgrade among them into your Upgrade slot (see <em>Build</em>).</li>
           <li><b>Set the Clock</b>Put a marker on the Clock: 5 players start at 32, 4 players at 30, 3 players at 27, 2 players at 22. Fewer players launch fewer nukes, so the fuse is shorter.</li>
           <li><b>First player</b>Give the first player token to the most paranoid player.</li>
         </ol>
@@ -451,7 +451,7 @@
         <p>Draw <strong>2</strong> Build cards into your hand.</p>
         <p><strong>Empty deck?</strong> When the Build or Propaganda deck runs out, at any moment (even halfway through a draw), shuffle its discard pile into a new face-down deck and keep drawing. Cards still on the old deck stay on top.</p>
         <p><strong>Operations</strong> (green Build cards) don't cost an action, but you may play only <strong>one Operation per turn</strong>, before or after your action. Tricks from the Propaganda deck that you play on your turn don't count towards it.</p>
-        <p><strong>Upgrades</strong> (purple Build cards) go into an <strong>Upgrade slot</strong> as soon as you draw them. You have <strong>two</strong>. If both are taken, or you draw more upgrades at once than you have room for, keep the ones you want and discard the others. Upgrades don't count toward your hand.</p>
+        <p><strong>Upgrades</strong> (purple Build cards) may go into an <strong>Upgrade slot</strong> as soon as you draw them; one you don't slot is discarded. You have <strong>two</strong>. If both are taken, or you draw more upgrades at once than you have room for, keep the ones you want and discard the others. Upgrades don't count toward your hand.</p>
         <h4>Propaganda</h4>
         <p>Choose an opponent as your <strong>target</strong> and draw <strong>1</strong> Propaganda card.</p>
         <ul>
@@ -618,6 +618,15 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.15.2</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Upgrades</td><td>All five (Early Warning, Bomb Shelters, Spin Doctors, Doomsday Bunker, Mobile Launchers): "you may put it in your Upgrade slot". Fallout Shelters becomes Bomb Shelters and Shield Network becomes Mobile Launchers (name and text)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.15.1</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -751,6 +760,14 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.15.2</p><p class="vt">Optional upgrades</p></div>
+        <ul>
+          <li><b>Fallout Shelters is now Bomb Shelters:</b> <i>Once per round, when a nuke hits your cities, it removes 1 population cube fewer from each of them.</i> Cancelling fallout almost never mattered (fallout only takes the room a city has to grow), so the card did next to nothing in simulation; the new one is worth about as much as Early Warning or Spin Doctors.</li>
+          <li><b>Shield Network is gone; Mobile Launchers takes its place:</b> <i>When you Attack, you may also fire one weapon straight from your hand.</i> A shield that came back every round made its owner nearly untouchable when attacked once a round. Mobile Launchers lets you strike without loading first: worth little at a crowded table, a lot in a duel.</li>
+          <li><b>Slotting an upgrade is optional.</b> Every upgrade now reads <i>When you draw this, you may put it in your Upgrade slot.</i> An upgrade you don't slot is discarded. Upgrades already in your slots stay unless a new one needs the room.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.15.1</p><p class="vt">Trait check</p></div>
         <ul>
@@ -1148,11 +1165,11 @@ const BUILD = [
   {n:"Abort Mission", t:"special", q:1, tx:"Choose another player: the cards on their Launchpad and Runway go back to their hand.", fl:"Stand down. That's an order."},
   {n:"Disarmament Talks", t:"special", q:1, tx:"Every player discards 1 weapon from their hand, Launchpad or Runway. Turn the Doomsday Clock back 1 minute (never past its start).", fl:"Everyone puts their toys away."},
   {n:"Radar Blackout", t:"special", q:1, tx:"Discard the shields in another player's Shield slot, then put this card there. They can't play shields for the rest of this round.", fl:"Static on every screen."},
-  {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Once per round, when one of your cities is attacked, draw 1 Build card before you decide whether to block.", fl:"Beep."},
-  {n:"Fallout Shelters", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Once per round, when a nuke puts fallout on one of your cities, you may cancel all of it.", fl:"Duck and cover."},
-  {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
-  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. If the game ends at midnight, add 2 to your score.", fl:"Snacks for a decade."},
-  {n:"Shield Network", t:"upgrade", q:1, tx:"When you draw this, put it in your Upgrade slot. Once per round, when one of your shields blocks an attack, take it back into your hand.", fl:"Overlapping fields of hope."}
+  {n:"Early Warning", t:"upgrade", q:1, tx:"When you draw this, you may put it in your Upgrade slot. Once per round, when one of your cities is attacked, draw 1 Build card before you decide whether to block.", fl:"Beep."},
+  {n:"Bomb Shelters", t:"upgrade", q:1, tx:"When you draw this, you may put it in your Upgrade slot. Once per round, when a nuke hits your cities, it removes 1 population cube fewer from each of them.", fl:"Duck and cover."},
+  {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this, you may put it in your Upgrade slot. When you take the Propaganda action, draw 1 extra card. Resolve them one after another.", fl:"Truth, lightly edited."},
+  {n:"Doomsday Bunker", t:"upgrade", q:1, tx:"When you draw this, you may put it in your Upgrade slot. If the game ends at midnight, add 2 to your score.", fl:"Snacks for a decade."},
+  {n:"Mobile Launchers", t:"upgrade", q:1, tx:"When you draw this, you may put it in your Upgrade slot. When you Attack, you may also fire one weapon straight from your hand (besides a Nuclear Sub, which can always go).", fl:"Never where you left them."}
 ];
 
 /* ============ view switching, with a bookmarkable #token per tab ============ */
