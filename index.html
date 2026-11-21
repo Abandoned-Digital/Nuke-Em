@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.15.2 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.15.3 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -618,6 +618,15 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.15.3</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Shields</td><td>Nothing to print: take out 3 Missile Defence, 2 Iron Curtain and 1 Return to Sender (Build deck 60 cards)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.15.2</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -760,6 +769,13 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.15.3</p><p class="vt">Fewer shields</p></div>
+        <ul>
+          <li><b>Ten shields instead of sixteen:</b> Missile Defence 3 (was 6), Iron Curtain 1 (was 3), Return to Sender 1 (was 2); Interceptor 2 and Civil Defence 3 stay. Since shields are played from the hand whenever you are attacked, about half of all attacks were blocked. Now it is about one in three, so an attack usually does something. The Build deck has 60 cards.</li>
+          <li>In simulation (4 players) games run a little shorter (about 25 rounds instead of 28), more players get knocked out, and more games end with no continent left: with sensible play about 3% of 5-player games, 6% at 4 players and 11&ndash;14% at 2 or 3; when everyone plays hard, from 14% (5 players) to a third (2&ndash;3 players). With 2 or 3 players most games now end before midnight. The dead hand stays as it is.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.15.2</p><p class="vt">Optional upgrades</p></div>
         <ul>
@@ -1146,9 +1162,9 @@ const BUILD = [
   {n:"Hypersonic Nuke", t:"weapon", s:"lp", q:1, dmg:"4", clk:"+2", tx:"Hits the target city for 4. Can't be blocked by shields.", fl:"Too fast to argue with."},
   {n:"Dirty Bomb", t:"weapon", s:"lp", q:1, dmg:"2", clk:"+1", tx:"Hits the target city for 2 and leaves 3 fallout.", fl:"The gift that keeps on giving."},
   {n:"Carpet Bombing", t:"weapon", s:"rw", q:2, dmg:"2+2", clk:"0", tx:"Not nuclear. Hits two cities of your choice on the target continent for 2 each.", fl:"Thorough, not precise."},
-  {n:"Missile Defence", t:"shield", q:6, bl:"1", tx:"Play it when one of your cities is attacked: block that attack.", fl:"Works in most of the tests."},
-  {n:"Iron Curtain", t:"shield", q:3, bl:"ALL", tx:"Play it when one of your cities is attacked: block that attack and every other attack on your continent until the end of the round.", fl:"Drawn shut."},
-  {n:"Return to Sender", t:"shield", q:2, bl:"1", tx:"Play it when one of your cities is attacked: block it and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
+  {n:"Missile Defence", t:"shield", q:3, bl:"1", tx:"Play it when one of your cities is attacked: block that attack.", fl:"Works in most of the tests."},
+  {n:"Iron Curtain", t:"shield", q:1, bl:"ALL", tx:"Play it when one of your cities is attacked: block that attack and every other attack on your continent until the end of the round.", fl:"Drawn shut."},
+  {n:"Return to Sender", t:"shield", q:1, bl:"1", tx:"Play it when one of your cities is attacked: block it and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block that attack.", fl:"Friends in high orbits."},
   {n:"Civil Defence", t:"shield", q:3, boxes:[["3","MOVE"]], tx:"Doesn't block. Play it when one of your cities is attacked: first move up to 3 of your population cubes between your own cities.", fl:"Duck, cover, and relocate."},
   {n:"Budget Increase", t:"special", q:2, tx:"Draw 2 Build cards.", fl:"The schools can wait."},
