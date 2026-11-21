@@ -17,7 +17,7 @@
     --p-na:#3f86c4; --p-eu:#e0b532; --p-as:#c8372d; --p-af:#3f9e6e; --p-sa:#d6448f;
     /* Build deck keylines: one per card category */
     --rule-weapon:#c8372d; --rule-decoy:#a08a5c; --rule-shield:#3f86c4; --rule-special:#3f9e6e; --rule-upgrade:#8a5cc2;
-    --rule-success:#c2185b; --rule-backfire:#6b6b66; --rule-trick:#00897b;
+    --rule-success:#c2185b; --rule-backfire:#6b6b66; --rule-trick:#00897b; --rule-event:#3a9a3f;
     /* printed card face */
     --face:#fff; --faceink:#15130f; --facedash:#8b8b8b;
     /* the print uses Stencil and Bahnschrift; these are their closest web stand-ins */
@@ -361,7 +361,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.15.3 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.15.4 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -405,7 +405,7 @@
             <tr><td class="k">Action tracker</td><td class="n">1 / player</td><td>A cube that fits the squares of the action track. It shows the action you took last, which you can't take again this turn.</td></tr>
             <tr><td class="k">Helper cards</td><td class="n">4 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Targets (all five continents' cities), Setup + Game end.</td></tr>
             <tr><td class="k">Build deck</td><td class="n" id="m-build">&mdash;</td><td>Weapons, shields, operations and upgrades.</td></tr>
-            <tr><td class="k">Propaganda deck</td><td class="n" id="m-prop">&mdash;</td><td>Successes, backfires and tricks.</td></tr>
+            <tr><td class="k">Propaganda deck</td><td class="n" id="m-prop">&mdash;</td><td>Successes, backfires, tricks and events.</td></tr>
             <tr><td class="k">First player token</td><td class="n">1</td><td>Any distinct marker; it stays with the first player, not on the board.</td></tr>
           </tbody>
         </table></div>
@@ -455,12 +455,13 @@
         <h4>Propaganda</h4>
         <p>Choose an opponent as your <strong>target</strong> and draw <strong>1</strong> Propaganda card.</p>
         <ul>
-          <li><strong>Success:</strong> take population cubes from one of the target's cities and put them on one of your cities. You choose both. If that city has fewer population cubes than the card takes, you get what it has and it becomes a crater. Craters can't give or receive population cubes.</li>
-          <li><strong>Backfire:</strong> it goes wrong. When your population cubes defect, the target chooses which of your cities they leave.</li>
+          <li><strong>Success</strong> (60% of these cards): take 1, 2 or 3 population cubes from the target's cities and put them on your cities. You choose the cities, cube by cube, so they may come from and go to different ones. A city you empty becomes a crater. Craters can't give or receive population cubes.</li>
+          <li><strong>Backfire</strong> (40%): it goes wrong the other way. 1, 2 or 3 of your population cubes defect to the target, and the target chooses the cities, cube by cube.</li>
           <li><strong>Trick:</strong> keep it in your hand without showing it, and play it when the card says.</li>
+          <li><strong>Event:</strong> something strange happens, to the target or to the whole world, as the card says. Resolve it at once; nobody can answer it with Counter-Propaganda or Censorship. A city that leaves for the Moon counts as a crater for every rule, but nothing can rebuild it.</li>
         </ul>
         <p>Gained population cubes go to the city of your choice, into its <strong>dashed row</strong> on the world map. A city can hold at most <strong>twice its starting population cubes</strong>, minus any spots lost to <strong>fallout</strong>; when it is full, pick another city. If all your cities are full, you can't take in more people: population cubes you would steal stay where they are, and those in the supply stay there. Defectors keep their colour and count for whoever's city they live in, so a nuke on that city kills them too.</p>
-        <p><em>Counter-Propaganda</em> and <em>Censorship</em> answer any Propaganda card another player draws against you, Tricks included. Censorship resolves the card as if you had drawn it, aimed at the player who drew it; a Censored Trick goes to your hand. <em>Olympic Gold</em> targets every opponent, so each of them may answer it for their own population cube.</p>
+        <p><em>Counter-Propaganda</em> and <em>Censorship</em> answer any Propaganda card another player draws against you, Tricks included. Censorship resolves the card as if you had drawn it, aimed at the player who drew it; a Censored Trick goes to your hand.</p>
         <p>Propaganda never moves the Doomsday Clock.</p>
         <h4>Attack</h4>
         <p>Fire <strong>everything you have loaded</strong>: first the weapon on your Launchpad, then the one on your Runway. Each is its own attack: for each, choose an opponent's continent, then name a city on it. The two may go at different players. The details are in <em>Attacks</em> below. You can only choose Attack with something loaded (or a <em>Nuclear Sub</em> in hand: it is never loaded, and you may launch it from your hand along with the rest).</p>
@@ -618,6 +619,15 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.15.4</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Propaganda</td><td>All Successes and Backfires: new texts and counts (Free Concert 3, Jeans Smuggling 2, Leaflet Drop 2, Soap Opera 3, Pop Star Tour 2, Space Race Win 2, Olympic Gold 1; Leaked Memo 3, State TV Blooper 2, Defector Scandal 2, Hot Mic 1, Exposed Spy Ring 1, Awkward Photo 1). Fast Food Franchise, Defecting Scientist, Lost in Translation and Bread Lines go. Eleven new Event cards: Alien Abduction, Atomic Lizard, Wrong Number, Swapped Briefcases, Nuclear Tourism, Nuclear Testing, Meteor Shower, Moon Colony, Alien Infiltration, Baby Boom, Gold Rush. Propaganda deck 44 cards</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.15.3</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -769,6 +779,18 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.15.4</p><p class="vt">Strange days</p></div>
+        <ul>
+          <li><b>A new kind of Propaganda card: the Event.</b> Something strange happens to the target, and nobody can answer it. The first one is <b>Alien Abduction</b>: <i>a flying saucer beams up 1 population cube from each of the target's cities.</i> A bit of B-movie nonsense next to the nukes. The Propaganda deck has 34 cards.</li>
+          <li><b>Seven more Events</b> (1 copy each): <b>Atomic Lizard</b> stomps the highest-numbered city of every continent (1 cube each), <b>Wrong Number</b> turns the Clock back 2 minutes, <b>Swapped Briefcases</b> passes a random card from every hand to the left, <b>Nuclear Tourism</b> reopens every crater with 1 cube, <b>Nuclear Testing</b> moves the Clock 1 minute on, <b>Meteor Shower</b> takes 1 cube from every city in the world, and <b>Moon Colony</b> sends your own lowest-numbered city off to the Moon with everyone in it. The Propaganda deck has 41 cards.</li>
+          <li><b>Three good Events</b> (1 copy each): <b>Alien Infiltration</b> puts 1 population cube on every city in the world, <b>Baby Boom</b> puts 1 on every one of your own cities, and <b>Gold Rush</b> lets you draw 2 Build cards. The Propaganda deck has 44 cards.</li>
+          <li><b>Successes and Backfires are now plain cube moves</b>, 1, 2 or 3 cubes each: 15 Successes (7 &times; 1 cube, 5 &times; 2, 3 &times; 3) and 10 Backfires (5 &times; 1, 3 &times; 2, 2 &times; 3), so 60% go your way. A Success takes cubes from the target and you choose the cities; a Backfire sends yours to the target and they choose. The cubes may come from several cities. The old names stay as flavour; their special effects are gone (Olympic Gold, Pop Star Tour, Fast Food Franchise, Defecting Scientist, Lost in Translation, Awkward Photo, Hot Mic, Bread Lines, Exposed Spy Ring). Fast Food Franchise, Defecting Scientist, Lost in Translation and Bread Lines are out of the deck.</li>
+          <li>In simulation (4 players) a game sees about 6 Events. The bad ones take roughly 12 population cubes, the good ones give back about 8. About as many games reach midnight as before (51% at 4 players, was 57%); a few more end with no continent left (11%, was 7&ndash;8%).</li>
+          <li>On screen every Event has its own scene: the saucer beam, a giant foot, fireballs, camera flashes over the craters, a test blast in the Pacific, the red phone ringing, and a city plate that lifts off the top of the map.</li>
+          <li><b>Music:</b> Midnight Reflections and Shadowy Midnight are mostly bass, which laptop and phone speakers barely play, so they sounded much quieter than the rest. Their low end is trimmed and they are turned up to match.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.15.3</p><p class="vt">Fewer shields</p></div>
         <ul>
@@ -1112,38 +1134,46 @@ const CATS = {
   upgrade:{label:"Upgrades",c:"var(--rule-upgrade)"},
   success:{label:"Successes",foot:"Success",c:"var(--rule-success)"},
   backfire:{label:"Backfires",foot:"Backfire",c:"var(--rule-backfire)"},
-  trick:{label:"Tricks",c:"var(--rule-trick)"}
+  trick:{label:"Tricks",c:"var(--rule-trick)"},
+  event:{label:"Events",foot:"Event",c:"var(--rule-event)"}
 };
 
 /* Propaganda: no card here ever moves the Doomsday Clock */
-const STEAL = n => "Take " + n + " population cube" + (n > 1 ? "s" : "") + " from one of the target's cities and put " + (n > 1 ? "them" : "it") + " on one of your cities.";
-const DEFECT = n => "Backfire. " + n + " population cube" + (n > 1 ? "s" : "") + " from one of your cities defect" + (n > 1 ? "" : "s") + " to the target. They choose the cities.";
+const STEAL = n => "Take " + n + " population cube" + (n > 1 ? "s" : "") + " from the target's cities and put " + (n > 1 ? "them" : "it") + " on your cities. You choose the cities.";
+const DEFECT = n => n + " population cube" + (n > 1 ? "s" : "") + " from your cities defect" + (n > 1 ? "" : "s") + " to the target. They choose the cities.";
 const KEEP = "Keep this in your hand. ";
 const PROPAGANDA = [
-  {n:"Free Concert", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1), fl:"Democracy, now with a drum solo."},
-  {n:"Jeans Smuggling", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1), fl:"Denim diplomacy."},
-  {n:"Leaflet Drop", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1), fl:"Paper is cheaper than plutonium."},
-  {n:"Soap Opera", t:"success", q:2, boxes:[["2","CUBES"]], tx:STEAL(2), fl:"They stayed for the cliffhanger."},
-  {n:"Space Race Win", t:"success", q:1, boxes:[["2","CUBES"]], tx:STEAL(2), fl:"Flag planted, hearts won."},
-  {n:"Leaked Memo", t:"backfire", q:2, boxes:[["-1","CUBES", " clk"]], tx:DEFECT(1), fl:"Reply-all was a mistake."},
-  {n:"Defector Scandal", t:"backfire", q:1, boxes:[["-2","CUBES", " clk"]], tx:DEFECT(2), fl:"Your spokesman, on their TV."},
-  {n:"Awkward Photo", t:"backfire", q:1, tx:"Backfire. The target looks at your hand.", fl:"It was a costume party."},
-  {n:"Lost in Translation", t:"backfire", q:1, tx:"Backfire. Discard 1 random card from your hand.", fl:"The slogan meant something else."},
+  {n:"Free Concert", t:"success", q:3, boxes:[["+1","CUBE"]], tx:STEAL(1), fl:"Democracy, now with a drum solo."},
+  {n:"Jeans Smuggling", t:"success", q:2, boxes:[["+1","CUBE"]], tx:STEAL(1), fl:"Denim diplomacy."},
+  {n:"Leaflet Drop", t:"success", q:2, boxes:[["+1","CUBE"]], tx:STEAL(1), fl:"Paper is cheaper than plutonium."},
+  {n:"Soap Opera", t:"success", q:3, boxes:[["+2","CUBES"]], tx:STEAL(2), fl:"They stayed for the cliffhanger."},
+  {n:"Pop Star Tour", t:"success", q:2, boxes:[["+2","CUBES"]], tx:STEAL(2), fl:"Sold out in every capital."},
+  {n:"Space Race Win", t:"success", q:2, boxes:[["+3","CUBES"]], tx:STEAL(3), fl:"Flag planted, hearts won."},
+  {n:"Olympic Gold", t:"success", q:1, boxes:[["+3","CUBES"]], tx:STEAL(3), fl:"Gold, silver, and your citizens."},
+  {n:"Leaked Memo", t:"backfire", q:3, boxes:[["-1","CUBE"]], tx:DEFECT(1), fl:"Reply-all was a mistake."},
+  {n:"State TV Blooper", t:"backfire", q:2, boxes:[["-1","CUBE"]], tx:DEFECT(1), fl:"Live, unfortunately."},
+  {n:"Defector Scandal", t:"backfire", q:2, boxes:[["-2","CUBES"]], tx:DEFECT(2), fl:"Your spokesman, on their TV."},
+  {n:"Hot Mic", t:"backfire", q:1, boxes:[["-2","CUBES"]], tx:DEFECT(2), fl:"Is this thing on?"},
+  {n:"Exposed Spy Ring", t:"backfire", q:1, boxes:[["-3","CUBES"]], tx:DEFECT(3), fl:"The moustaches were fake."},
+  {n:"Awkward Photo", t:"backfire", q:1, boxes:[["-3","CUBES"]], tx:DEFECT(3), fl:"It was a costume party."},
   {n:"Leaked Launch Codes", t:"trick", q:1, tx:KEEP + "Play it on your turn: every other player shows you the weapons in their hand and on their Launchpad and Runway.", fl:"Found in a taxi."},
   {n:"Hacked Guidance", t:"trick", q:1, tx:KEEP + "Play it when a weapon is launched at you: give it a new target on any continent, following that weapon's own rules.", fl:"Have you tried turning it off and on?"},
   {n:"Counter-Propaganda", t:"trick", q:1, tx:KEEP + "Play it when another player's Propaganda card targets you: cancel it.", fl:"No, you are."},
   {n:"Double Agent", t:"trick", q:1, tx:KEEP + "Play it at any time: look at another player's hand.", fl:"Works for everyone. Loyal to none."},
-  {n:"Olympic Gold", t:"success", q:1, boxes:[["1","EACH AHEAD"]], tx:"Take 1 population cube from one city of every opponent who has more population cubes than you, and put them on your cities.", fl:"Gold, silver, and your citizens."},
-  {n:"Pop Star Tour", t:"success", q:2, boxes:[["1","CUBES"]], tx:"Take 1 population cube from the target's biggest city and put it on one of your cities.", fl:"Sold out in every capital."},
-  {n:"Fast Food Franchise", t:"success", q:2, boxes:[["1","CUBES"]], tx:STEAL(1) + " The target discards 1 random card.", fl:"Would you like freedom with that?"},
-  {n:"Hot Mic", t:"backfire", q:1, tx:"Backfire. Show your hand to every player.", fl:"Is this thing on?"},
-  {n:"State TV Blooper", t:"backfire", q:2, boxes:[["-1","CUBE", " clk"]], tx:DEFECT(1), fl:"Live, unfortunately."},
-  {n:"Bread Lines", t:"backfire", q:1, boxes:[["-2","CUBES", " clk"]], tx:"Backfire. Remove 2 population cubes from your biggest city and put them back in the supply.", fl:"Queue here for the future."},
-  {n:"Exposed Spy Ring", t:"backfire", q:1, boxes:[["-1","CARD", " clk"]], tx:"Backfire. The target looks at your hand and takes 1 card from it.", fl:"The moustaches were fake."},
-  {n:"Defecting Scientist", t:"success", q:1, boxes:[["1","CARD"]], tx:"The target gives you 1 random card from their hand.", fl:"Brought his notes. And his cat."},
   {n:"Censorship", t:"trick", q:1, tx:KEEP + "Play it when another player's Propaganda card targets you: resolve it as if you drew it, aimed at them.", fl:"Nothing to see here."},
   {n:"Deepfake", t:"trick", q:1, tx:KEEP + "Play it when any weapon is launched: you pick the continent it goes to (not your own); the attacker names the city.", fl:"Seeing is no longer believing."},
   {n:"Whistleblower", t:"trick", q:1, tx:KEEP + "Play it on your turn: look at another player's hand and show one card from it to everyone.", fl:"Leaks are a public service."},
+  {n:"Alien Abduction", t:"event", q:1, boxes:[["-1","EACH CITY"]], tx:"A flying saucer beams up 1 population cube from each of the target's cities.", fl:"We come in peace. Mostly."},
+  {n:"Atomic Lizard", t:"event", q:1, boxes:[["-1","CUBE EACH"]], tx:"A giant lizard stomps across the world: on every continent, the highest-numbered city still standing loses 1 population cube.", fl:"It was only looking for its keys."},
+  {n:"Wrong Number", t:"event", q:1, boxes:[["+2","MINUTES"]], tx:"Turn the Doomsday Clock back 2 minutes (never past its start).", fl:"The red phone rang. Someone wanted a pizza."},
+  {n:"Swapped Briefcases", t:"event", q:1, boxes:[["1","CARD LEFT"]], tx:"Every player gives 1 random card from their hand to the player on their left.", fl:"Identical luggage, different summit."},
+  {n:"Nuclear Tourism", t:"event", q:1, boxes:[["+1","PER CRATER"]], tx:"Every crater of a player still in the game gets 1 population cube from the supply.", fl:"Glowing reviews."},
+  {n:"Nuclear Testing", t:"event", q:1, boxes:[["-1","MINUTE"]], tx:"Move the Doomsday Clock 1 minute closer to midnight.", fl:"Just checking it still works."},
+  {n:"Meteor Shower", t:"event", q:1, boxes:[["-1","EVERY CITY"]], tx:"Every city worldwide loses 1 population cube. Not nuclear.", fl:"For once, not anybody's fault."},
+  {n:"Moon Colony", t:"event", q:1, tx:"Your own lowest-numbered city still standing blasts off for the Moon: it leaves the game with all its population cubes.", fl:"Low gravity. High rent."},
+  {n:"Alien Infiltration", t:"event", q:1, boxes:[["+1","EVERY CITY"]], tx:"Flying saucers drop off new residents: every city worldwide gets 1 population cube from the supply.", fl:"They say they're from Ohio."},
+  {n:"Baby Boom", t:"event", q:1, boxes:[["+1","YOUR CITIES"]], tx:"Every one of your cities gets 1 population cube from the supply.", fl:"Something in the water."},
+  {n:"Gold Rush", t:"event", q:1, boxes:[["2","CARDS"]], tx:"You strike gold: draw 2 Build cards.", fl:"Finders keepers."},
   {n:"Sleeper Agent", t:"trick", q:1, tx:KEEP + "Play it on your turn: take 1 population cube from a player who attacked you last round.", fl:"Activated by a postcard."},
 
 ];
