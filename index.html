@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.26.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.27.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -528,7 +528,7 @@
         <h3>The Doomsday Clock</h3>
         <p>The Clock counts minutes to midnight. It only moves when weapons are launched: each one moves it by its <strong>Clock value</strong>. No nukes, no midnight.</p>
         <div class="clock" id="clock" aria-label="Doomsday Clock track from 32 to midnight"></div>
-        <p class="clockkey">About half an hour to midnight. Starting positions: <b>32</b> for 5 players &middot; <b>30</b> for 4 &middot; <b>27</b> for 3 &middot; <b>22</b> for 2. Red square is midnight.</p>
+        <p class="clockkey">Full game, starting positions: <b>35</b> for 5 players &middot; <b>30</b> for 4 &middot; <b>25</b> for 3 &middot; <b>20</b> for 2. Short game: 10 minutes less (<b>25</b> &middot; <b>20</b> &middot; <b>15</b> &middot; <b>10</b>). Red square is midnight.</p>
         <p>Some Build cards turn the Clock back, such as <em>Peace Treaty</em> (5 minutes). The Clock never goes above its starting position.</p>
         <p>Conventional weapons have Clock <strong>+0</strong>. A player who is behind wants a long game and fights with them. The leader wants the game over and reaches for nukes.</p>
         <p>A nuke sent back by <em>Return to Sender</em> does not move the Clock again. It's the same bomb.</p>
@@ -628,6 +628,16 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.27.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Player boards</td><td>Africa: new trait (Open Plains); South America: new trait (Spoils of War); all five: new action column (icons)</td></tr>
+        <tr><td class="k">Doomsday Clock</td><td>Full game and Short game start labels</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.26.0</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -652,7 +662,7 @@
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
       <tbody>
         <tr><td class="k">Build 2</td><td>All five upgrades are new: Arms Factory, Spin Doctors (new text), Supply Depot, Salted Warheads, Spy Network (cards 53&ndash;57)</td></tr>
-        <tr><td class="k">Player boards</td><td>North America: Early Warning; Africa: Scattered Settlements; South America: Remote Refuge (names and texts)</td></tr>
+        <tr><td class="k">Player boards</td><td>North America: Early Warning; Africa: Open Plains; South America: Spoils of War (names and texts)</td></tr>
       </tbody>
     </table></div>
   </section>
@@ -889,6 +899,16 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.27.0</p><p class="vt">Two new traits</p></div>
+        <ul>
+          <li><b>Africa: Open Plains</b> replaces Scattered Settlements. Every time one of your cities would get fallout, it gets 1 fewer (a single token becomes none).</li>
+          <li><b>Doomsday Clock sheet:</b> shows both starts: Full game 35 / 30 / 25 / 20 (5 / 4 / 3 / 2 players) in black, Short game 25 / 20 / 15 / 10 in red. The manual still listed the old 32 / 30 / 27 / 22; fixed.</li>
+          <li><b>Short game (digital):</b> the Clock starts 10 minutes earlier than the full game: 10 / 15 / 20 / 25 for 2 / 3 / 4 / 5 players (it used to be 40% of the full value).</li>
+          <li><b>Fixes on screen:</b> when you pick cities for a Defector Scandal or a Success, each cube now flies to your first choice before the next question is asked. Peace Treaty (and Arms Race) turn the Clock when the card is played, not after the next action is revealed.</li>
+          <li><b>South America: Spoils of War</b> replaces Remote Refuge (the +2 at midnight is gone). When you destroy a city, take 1 of its population cubes and put it on one of your cities (it must have room; returned attacks don&rsquo;t count).</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.26.0</p><p class="vt">Bigger deals</p></div>
         <ul>
@@ -1334,10 +1354,10 @@ const CONTINENTS = [
    tr:["Hardened Megacities", "When a nuke would deal 3 or more damage to one of your cities, it deals 1 less."],
    cities:[["Tokyo",8,3],["Shanghai",8,3]]},
   {k:"af", n:"Africa", c:"var(--p-af)", tag:"The youngest, fastest-growing population",
-   tr:["Scattered Settlements", "Once per round, a nuke on your cities removes 1 population cube fewer from each of them."],
+   tr:["Open Plains", "Every time one of your cities would get fallout, it gets 1 fewer."],
    cities:[["Cairo",5,2],["Lagos",5,2],["Nairobi",3,1],["Johannesburg",3,1]]},
   {k:"sa", n:"South America", c:"var(--p-sa)", tag:"Two giant cities and the commodities to feed them",
-   tr:["Remote Refuge", "If the game ends at midnight, add 2 to your score."],
+   tr:["Spoils of War", "When you destroy a city, take 1 of its population cubes and put it on one of your cities."],
    cities:[["Bogotá",5,2],["São Paulo",6,2],["Buenos Aires",5,2]]}
 ];
 
