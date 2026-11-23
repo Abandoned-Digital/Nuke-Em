@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.27.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.28.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -483,7 +483,7 @@
         <h4>Pass</h4>
         <p>Do nothing this round. You move your cube to Pass like any other action. But Pass is never locked: with your cube on Pass you may Pass again, and every other action is open. So you can Pass two rounds in a row, and after a Pass you choose from all six. Use it when nothing else is worth it, or to get every action back.</p>
         <h4>Shields</h4>
-        <p>There is no Defend action. Shields are <strong>reactions</strong>: you keep them in your hand and play one when one of your cities is attacked (see <em>Attacks</em>). Playing a shield costs no action.</p>
+        <p>There is no Defend action. Shields are <strong>reactions</strong>: you keep them in your hand and play one when your continent is attacked (see <em>Attacks</em>). One shield blocks the whole attack, even a MIRV or Carpet Bombing that hits several of your cities. Playing a shield costs no action.</p>
       </section>
 
       <section id="s-attack">
@@ -626,6 +626,17 @@
           <li><b>South America</b> is new and untested: its numbers (cities, trait) are first guesses.</li>        </ol>
       </article>
     </div>
+  </section>
+  <section>
+    <h2>Reprint for 0.28.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 1</td><td>Missile Defence (3 copies), Iron Curtain, Return to Sender, Interceptor (2 copies), SAM Site (2 copies): new text</td></tr>
+        <tr><td class="k">Build 2</td><td>Spy Network: new text</td></tr>
+        <tr><td class="k">Player boards</td><td>Africa: Open Plains now prevents up to 2 fallout</td></tr>
+      </tbody>
+    </table></div>
   </section>
   <section>
     <h2>Reprint for 0.27.0</h2>
@@ -900,9 +911,20 @@
     <h2>Releases</h2>
     <div class="log">
       <article class="rel">
+        <div><p class="v">0.28.0</p><p class="vt">Ready in the room</p></div>
+        <ul>
+          <li><b>Online lobby (digital):</b> Play online opens a room straight away. Your friend opens the link and lands in the same room, picks their own continent and presses Ready; the host sets the bots and the game length, presses Ready too, and starts the game once both are ready. Any change clears both Ready marks. A friend who leaves before the start frees the seat for the next one.</li>
+          <li><b>Shields, clearer wording:</b> every shield now says <i>when your continent is attacked</i> and blocks <i>the whole attack</i>: one shield stops a MIRV or Carpet Bombing on all its cities at once. The rule was already like this; only the words changed.</li>
+          <li><b>Spy Network</b> takes 1 <i>random</i> card from the hand you look at, not one you choose.</li>
+          <li><b>Africa: Open Plains</b> prevents up to 2 fallout per hit (1 or 2 become none, 3 become 1), up from 1.</li>
+          <li><b>Bots (digital):</b> Normal and Hard bots no longer take Propaganda when none of their cities has room for another cube (Easy still might).</li>
+          <li><b>Results screen:</b> says &ldquo;1 city standing&rdquo;, not &ldquo;1 cities standing&rdquo;.</li>
+        </ul>
+      </article>
+      <article class="rel">
         <div><p class="v">0.27.0</p><p class="vt">Two new traits</p></div>
         <ul>
-          <li><b>Africa: Open Plains</b> replaces Scattered Settlements. Every time one of your cities would get fallout, it gets 1 fewer (a single token becomes none).</li>
+          <li><b>Africa: Open Plains</b> replaces Scattered Settlements. Every time one of your cities would get fallout, it gets up to 2 fewer (1 or 2 tokens become none, 3 become 1).</li>
           <li><b>Doomsday Clock sheet:</b> shows both starts: Full game 35 / 30 / 25 / 20 (5 / 4 / 3 / 2 players) in black, Short game 25 / 20 / 15 / 10 in red. The manual still listed the old 32 / 30 / 27 / 22; fixed.</li>
           <li><b>Short game (digital):</b> the Clock starts 10 minutes earlier than the full game: 10 / 15 / 20 / 25 for 2 / 3 / 4 / 5 players (it used to be 40% of the full value).</li>
           <li><b>Fixes on screen:</b> when you pick cities for a Defector Scandal or a Success, each cube now flies to your first choice before the next question is asked. Peace Treaty (and Arms Race) turn the Clock when the card is played, not after the next action is revealed.</li>
@@ -927,7 +949,7 @@
       <article class="rel">
         <div><p class="v">0.24.0</p><p class="vt">One upgrade per action</p></div>
         <ul>
-          <li><b>The five upgrades each make one action better:</b> <b>Arms Factory</b> (Build: draw 3 Build cards instead of 2), <b>Spin Doctors</b> (Propaganda: you may discard the card you draw and draw another; you must use the second), <b>Supply Depot</b> (Prepare: also draw 1 Build card), <b>Salted Warheads</b> (Attack: each of your weapons leaves 1 extra fallout on every city it hits, conventional ones too) and <b>Spy Network</b> (Intel: also take 1 card from the hand you look at). Early Warning, Bomb Shelters, Doomsday Bunker and Mobile Launchers are gone as upgrades.</li>
+          <li><b>The five upgrades each make one action better:</b> <b>Arms Factory</b> (Build: draw 3 Build cards instead of 2), <b>Spin Doctors</b> (Propaganda: you may discard the card you draw and draw another; you must use the second), <b>Supply Depot</b> (Prepare: also draw 1 Build card), <b>Salted Warheads</b> (Attack: each of your weapons leaves 1 extra fallout on every city it hits, conventional ones too) and <b>Spy Network</b> (Intel: also take 1 random card from the hand you look at). Early Warning, Bomb Shelters, Doomsday Bunker and Mobile Launchers are gone as upgrades.</li>
           <li>The upgrade texts now read <i>place it in your Upgrade slot</i> and <i>Whenever you&hellip;</i>. In the game and in the credits the music track &ldquo;Falling Rain&rdquo; is called by its real name, <b>Rains Will Fall</b>.</li>
           <li><b>Three continent traits changed</b>, because their old traits became upgrades. <b>North America: Early Warning</b> (once per round, when one of your cities is attacked, draw 1 Build card before deciding whether to block). <b>Africa: Scattered Settlements</b> (once per round, a nuke on your cities removes 1 cube fewer from each). <b>South America: Remote Refuge</b> (if the game ends at midnight, add 2 to your score). These are the old upgrades' effects.</li>
         </ul>
@@ -977,7 +999,7 @@
         <ul>
           <li><b>Events:</b> <b>Alien Abduction</b> is Alien Infiltration the other way round: every city worldwide loses 1 population cube. <b>Atomic Lizard</b> stomps every one of <i>your</i> cities (1 cube each). <b>Meteor Shower</b> now takes 2 cubes from every city. <b>Wrong Number</b> is gone: 10 Events left.</li>
           <li><b>Propaganda deck: 40 cards</b>, still a quarter Events and 60/40 Successes to Backfires: 18 Successes (Free Concert 8, Leaflet Drop 6, Olympic Gold 4) and 12 Backfires (State TV Blooper 5, Defector Scandal 4, Hot Mic 3), 10 Events.</li>
-          <li><b>Traits moved:</b> <b>Europe</b> gets <b>Bounce Back</b> from Africa (it fits its many small cities); <b>Africa</b> gets <b>Natural Resources</b> (the old North America trait): <i>when you Prepare, also draw 1 Build card</i>; <b>North America</b> becomes <b>Surveillance State</b>: <i>when you take the Intel action, also take 1 card from the hand you look at.</i> Old Diplomacy is gone.</li>
+          <li><b>Traits moved:</b> <b>Europe</b> gets <b>Bounce Back</b> from Africa (it fits its many small cities); <b>Africa</b> gets <b>Natural Resources</b> (the old North America trait): <i>when you Prepare, also draw 1 Build card</i>; <b>North America</b> becomes <b>Surveillance State</b>: <i>when you take the Intel action, also take 1 random card from the hand you look at.</i> Old Diplomacy is gone.</li>
           <li><b>On screen:</b> the Doomsday Clock dial spreads all its dots evenly round the whole circle (a short game just has wider gaps), with no empty stretch before midnight.</li>
         </ul>
       </article>
@@ -1354,7 +1376,7 @@ const CONTINENTS = [
    tr:["Hardened Megacities", "When a nuke would deal 3 or more damage to one of your cities, it deals 1 less."],
    cities:[["Tokyo",8,3],["Shanghai",8,3]]},
   {k:"af", n:"Africa", c:"var(--p-af)", tag:"The youngest, fastest-growing population",
-   tr:["Open Plains", "Every time one of your cities would get fallout, it gets 1 fewer."],
+   tr:["Open Plains", "Every time one of your cities would get fallout, it gets up to 2 fewer (1 or 2 become none, 3 become 1)."],
    cities:[["Cairo",5,2],["Lagos",5,2],["Nairobi",3,1],["Johannesburg",3,1]]},
   {k:"sa", n:"South America", c:"var(--p-sa)", tag:"Two giant cities and the commodities to feed them",
    tr:["Spoils of War", "When you destroy a city, take 1 of its population cubes and put it on one of your cities."],
@@ -1412,11 +1434,11 @@ const BUILD = [
   {n:"Nuclear Sub", t:"weapon", s:"hb", q:2, dmg:"4", clk:"+2", tx:"Hits the target city for 4.", fl:"Somewhere under the Atlantic."},
   {n:"Destroyer", t:"weapon", s:"hb", q:1, dmg:"3", clk:"0", tx:"Not nuclear. Hits the target city for 3.", fl:"Escorting nothing in particular."},
   {n:"Naval Barrage", t:"weapon", s:"hb", q:1, dmg:"1", dl:"EACH CITY", clk:"0", tx:"Not nuclear. Hits every city on the target continent for 1.", fl:"Shore leave, but louder."},
-  {n:"Missile Defence", t:"shield", q:3, bl:"1", tx:"Play it when one of your cities is attacked: block that attack.", fl:"Works in most of the tests."},
-  {n:"Iron Curtain", t:"shield", q:1, bl:"ALL", tx:"Play it when one of your cities is attacked: block that attack and every other attack on your continent until the end of the round.", fl:"Drawn shut."},
-  {n:"Return to Sender", t:"shield", q:1, bl:"1", tx:"Play it when one of your cities is attacked: block it and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
-  {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block that attack.", fl:"Friends in high orbits."},
-  {n:"SAM Site", t:"shield", q:2, bl:"1", tx:"Play it when a bomber (a Runway weapon) attacks one of your cities: block that attack. The bomber is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
+  {n:"Missile Defence", t:"shield", q:3, bl:"1", tx:"Play it when your continent is attacked: block the whole attack.", fl:"Works in most of the tests."},
+  {n:"Iron Curtain", t:"shield", q:1, bl:"ALL", tx:"Play it when your continent is attacked: block that attack and every other attack on your continent until the end of the round.", fl:"Drawn shut."},
+  {n:"Return to Sender", t:"shield", q:1, bl:"1", tx:"Play it when your continent is attacked: block the whole attack and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
+  {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block the whole attack.", fl:"Friends in high orbits."},
+  {n:"SAM Site", t:"shield", q:2, bl:"1", tx:"Play it when a bomber (a Runway weapon) attacks your continent: block that attack. The bomber is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
   {n:"Spy Satellite", t:"special", q:2, tx:"Every other player tells you how many shields they hold.", fl:"Smile."},
   {n:"Reconstruction", t:"special", q:2, tx:"Put 2 population cubes from the supply on your cities, one at a time, or remove all the fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:2, tx:"Give a card from your hand to another player and take up to 2 random cards from their hand.", fl:"No questions asked."},
@@ -1436,7 +1458,7 @@ const BUILD = [
   {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this card, place it in your Upgrade slot. Whenever you take the Propaganda action, you may discard the card you draw and draw a replacement. You must use the replacement card.", fl:"Truth, lightly edited."},
   {n:"Supply Depot", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Prepare, also draw 1 Build card.", fl:"Everything is accounted for, somewhere."},
   {n:"Salted Warheads", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Attack, each of your weapons leaves 1 additional Fallout on every city it hits.", fl:"Nothing grows here any more."},
-  {n:"Spy Network", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you take the Intel action, also take 1 card from the hand you look at.", fl:"Trust no one. Not even us."}
+  {n:"Spy Network", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you take the Intel action, also take 1 random card from the hand you look at.", fl:"Trust no one. Not even us."}
 ];
 
 /* ============ view switching, with a bookmarkable #token per tab ============ */
