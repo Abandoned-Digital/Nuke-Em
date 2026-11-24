@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.30.0 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.30.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -910,6 +910,15 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.30.1</p><p class="vt">Waiting for a dropped player</p></div>
+        <ul>
+          <li><b>Disconnects (online):</b> a player who disconnects, for any reason (End game included), has 2 minutes to come back with Reconnect on Play online. The other player sees the countdown at the top of the screen. When it runs out, the missing player is eliminated as soon as the next turn starts (if it runs out during your own turn, you finish that turn first): their cities blast off to the moon one by one, with the Moon Colony launch, their hand and board are discarded (no Dead Hand), and the game goes on for everyone left. A question they still owe before that (say, a reaction to an attack) is answered by a bot. Reconnect no longer has a time limit of its own: it shows as long as you can still get back in.</li>
+          <li><b>Fix (online):</b> a short connection blip (a background tab, a wifi hiccup) could make a running game look empty, so it got cleaned up and the other player could not Reconnect. Your page now marks you present again every time it reconnects. The Ready tag also looks the same on both seats, in the same spot. After a game, the button in the middle says End game (it said New game).</li>
+          <li><b>Private rooms (online):</b> in the room, the host picks Public game (on the Play online list) or Private game (not on the list). Game length and Public / Private sit side by side as two toggle buttons (a click switches to the other option); Full Clock is now called Normal game. Anyone can join a room still in its lobby by typing its 5-letter code under Play online.</li>
+          <li><b>Room list:</b> with many open rooms, the list scrolls inside the panel (its header stays on top) and Create room and Back stay in view. Its columns keep a fixed width, so the table doesn't shift when a room changes its settings. A wrong code just says "This room does not exist". Fix: a guest pressing Back in your room closed the whole room; now it only frees their seat. The disconnect note names the player with their continent, in its colour.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.30.0</p><p class="vt">A new title screen</p></div>
         <ul>
