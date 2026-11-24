@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.30.3 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.30.4 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -406,7 +406,7 @@
             <tr><td class="k">Fallout tokens</td><td class="n">~40</td><td>Small markers that cover one cube spot. A nuke leaves one for every population cube it removes from a city (see <em>Fallout</em>).</td></tr>
             <tr><td class="k">Game board</td><td class="n">1</td><td>A world map (A2, 594 &times; 420 mm) shared by everyone, in the middle of the table. All five continents in their player colours, with every numbered city in a box of cube spots (a solid starting row and a dashed growth row) linked to its place on the map. In an empty ocean: the Doomsday Clock (32 spots running clockwise to midnight, start spots for 5, 4, 3 and 2 players marked). Bottom right, in the Indian Ocean: the Build and Propaganda deck spots. Keep the cube supply and the fallout tokens next to you, off the board. The Clock marker is any cube or coin.</td></tr>
             <tr><td class="k">Action tracker</td><td class="n">1 / player</td><td>A cube that fits the squares of the action track. It shows the action you took last, which you can't take again this turn.</td></tr>
-            <tr><td class="k">Helper cards</td><td class="n">4 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Targets (all five continents' cities), Setup + Game end.</td></tr>
+            <tr><td class="k">Helper cards</td><td class="n">3 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Setup + Game end.</td></tr>
             <tr><td class="k">Build deck</td><td class="n" id="m-build">&mdash;</td><td>Weapons, shields, operations and upgrades.</td></tr>
             <tr><td class="k">Propaganda deck</td><td class="n" id="m-prop">&mdash;</td><td>Successes, backfires and events.</td></tr>
             <tr><td class="k">First player token</td><td class="n">1</td><td>Any distinct marker; it stays with the first player, not on the board.</td></tr>
@@ -626,6 +626,16 @@
           <li><b>South America</b> is new and untested: its numbers (cities, trait) are first guesses.</li>        </ol>
       </article>
     </div>
+  </section>
+  <section>
+    <h2>Reprint for 0.30.4</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Helper cards</td><td>Both sheets, all five sets: the Targets card is gone, the other cards close the gaps (sets 1&ndash;4 fill the top two rows, set 5 the bottom row), new texts and even spacing on every card</td></tr>
+        <tr><td class="k">Build 1</td><td>30&ndash;31 Defence Cuts (was Spy Satellite): new name, text and flavour</td></tr>
+      </tbody>
+    </table></div>
   </section>
   <section>
     <h2>Reprint for 0.30.2</h2>
@@ -911,7 +921,7 @@
         <tr><td class="k">Build (Back)</td><td>Page 2. Print it behind each Build sheet; every Build back is the same.</td></tr>
         <tr><td class="k">Propaganda</td><td>All 29 Propaganda cards (layer <em>Propaganda</em>, page 1)</td></tr>
         <tr><td class="k">Propaganda (Back)</td><td>Page 2, layer <em>Propaganda (Back)</em></td></tr>
-        <tr><td class="k">Helper cards</td><td>Poker cards (63 &times; 89 mm), 4 per player, layer <em>Helper Cards</em> on page 1. Print <em>Helper Cards (Back)</em> on page 2 behind it: these are the second sides, not a shared back.</td></tr>
+        <tr><td class="k">Helper cards</td><td>Poker cards (63 &times; 89 mm), 3 per player, layer <em>Helper Cards</em> on page 1. Print <em>Helper Cards (Back)</em> on page 2 behind it: these are the second sides, not a shared back.</td></tr>
         <tr><td class="k">Game board</td><td>The world map, its own file <em>Gameboard.af</em> (A2, 594 &times; 420 mm, no back). For playtests, print it on two A3 sheets that meet in the middle; no city box crosses that seam. The final version goes on one A2 sheet.</td></tr>
         <tr><td class="k">Action cards</td><td>30 Mini-Euro cards, 6 per player, layer <em>Action Cards</em> on page 1, with <em>Action Cards (Back)</em> on page 2 behind it.</td></tr>
       </tbody>
@@ -920,6 +930,14 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.30.4</p><p class="vt">Defence Cuts</p></div>
+        <ul>
+          <li><b>Start screens (digital):</b> titles, labels and buttons can no longer be selected as text (name, code and chat boxes still can). The Spectate screen drops its &ldquo;4&times; speed&rdquo; line.</li>
+          <li><b>Helper cards:</b> the Targets card is gone, so each player has 3 (Round + Attack, Actions + Good to know, Setup + Game end). All were checked against the rules: Round says you <i>may</i> play a shield and which shields you discard at the end of the round; Attack mentions fallout; Good to Know lists all five shields, explains where gained cubes and fallout go, and covers the Runway too. Every card has even gaps between its steps, and sets 2&ndash;5 had an old Round card (&ldquo;2 upgrades&rdquo;) that now matches.</li>
+          <li><b>Defence Cuts replaces Spy Satellite</b> (Operation, 2 copies): <i>Choose another player: they discard every shield in their hand.</i> Spy Satellite asked every player to tell you a number in secret, which doesn&rsquo;t work at a real table; this works openly. In 1,000-game sims, continents that draw it win their fair share (Normal 26.8%, Hard 23.8%; fair 25%). Bots play it right before their own Attack, or when they know a rival holds a shield.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.30.3</p><p class="vt">Phones: sideways first</p></div>
         <ul>
@@ -1496,7 +1514,7 @@ const BUILD = [
   {n:"Return to Sender", t:"shield", q:1, bl:"1", tx:"Play it when your continent is attacked: block the whole attack and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block the whole attack.", fl:"Friends in high orbits."},
   {n:"SAM Site", t:"shield", q:2, bl:"1", tx:"Play it when a bomber (a Runway weapon) attacks your continent: block that attack. The bomber is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
-  {n:"Spy Satellite", t:"special", q:2, tx:"Every other player tells you how many shields they hold.", fl:"Smile."},
+  {n:"Defence Cuts", t:"special", q:2, tx:"Choose another player: they discard every shield in their hand.", fl:"Efficiency savings."},
   {n:"Reconstruction", t:"special", q:2, tx:"Put 2 population cubes from the supply on your cities, one at a time, or remove all the fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:2, tx:"Give a card from your hand to another player and take up to 2 random cards from their hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 3 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
