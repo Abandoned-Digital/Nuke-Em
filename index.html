@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.30.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.30.2 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -528,7 +528,7 @@
         <h3>The Doomsday Clock</h3>
         <p>The Clock counts minutes to midnight. It only moves when weapons are launched: each one moves it by its <strong>Clock value</strong>. No nukes, no midnight.</p>
         <div class="clock" id="clock" aria-label="Doomsday Clock track from 32 to midnight"></div>
-        <p class="clockkey">Full game, starting positions: <b>35</b> for 5 players &middot; <b>30</b> for 4 &middot; <b>25</b> for 3 &middot; <b>20</b> for 2. Short game: 10 minutes less (<b>25</b> &middot; <b>20</b> &middot; <b>15</b> &middot; <b>10</b>). Red square is midnight.</p>
+        <p class="clockkey">Normal game, starting positions: <b>35</b> for 5 players &middot; <b>30</b> for 4 &middot; <b>25</b> for 3 &middot; <b>20</b> for 2. Short game: 10 minutes less (<b>25</b> &middot; <b>20</b> &middot; <b>15</b> &middot; <b>10</b>). Red square is midnight.</p>
         <p>Some Build cards turn the Clock back, such as <em>Peace Treaty</em> (5 minutes). The Clock never goes above its starting position.</p>
         <p>Conventional weapons have Clock <strong>+0</strong>. A player who is behind wants a long game and fights with them. The leader wants the game over and reaches for nukes.</p>
         <p>A nuke sent back by <em>Return to Sender</em> does not move the Clock again. It's the same bomb.</p>
@@ -626,6 +626,16 @@
           <li><b>South America</b> is new and untested: its numbers (cities, trait) are first guesses.</li>        </ol>
       </article>
     </div>
+  </section>
+  <section>
+    <h2>Reprint for 0.30.2</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Doomsday Clock</td><td>Start labels: Full game is now Normal game</td></tr>
+        <tr><td class="k">Player board</td><td>North America: wider trait box (the Early Warning text ran out of it)</td></tr>
+      </tbody>
+    </table></div>
   </section>
   <section>
     <h2>Reprint for 0.28.0</h2>
@@ -910,6 +920,18 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.30.2</p><p class="vt">A bot holds your seat</p></div>
+        <ul>
+          <li><b>Disconnects (online), reworked:</b> when a player disconnects (End game included), a Hard bot plays for them until the end of the round, after a 10-second grace so a short wifi drop never hands your move to a bot. At the start of the next round, the round waits until one of three things happens: they are back (they take over again), they are still away (the game waits there), or their 2 minutes are up (they are eliminated and the new round starts without them).</li>
+          <li><b>Reconnecting mid-round:</b> you watch the bot finish the round for you, then take over at the start of the next one.</li>
+          <li><b>Shockwave (digital):</b> every nuke sends a shockwave rippling out across the map from the blast; bigger bombs make a wider, stronger ring. It stays inside the map and leaves the explosion itself crisp.</li>
+          <li><b>Animated sea (digital):</b> the oceans slowly swell and shimmer. The empty discard slot is solid, so the sea doesn&rsquo;t show through it.</li>
+          <li><b>North America board:</b> the trait box is wider, so the whole Early Warning text fits inside it.</li>
+          <li><b>Normal game:</b> the full-length game is called Normal game everywhere, on the Doomsday Clock sheet too (it said Full game).</li>
+          <li><b>Messages:</b> the note says when a bot is playing, when someone is back, and when they will be eliminated. The &ldquo;you are eliminated&rdquo; message puts &ldquo;The game goes on without you.&rdquo; on its own line.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.30.1</p><p class="vt">Waiting for a dropped player</p></div>
         <ul>
