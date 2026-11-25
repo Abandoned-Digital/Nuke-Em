@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.30.5 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.32.1 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -385,11 +385,11 @@
         <h3>Overview &amp; winning</h3>
         <p>Every player rules one continent, made up of 3 to 6 cities. Each city holds population cubes. Nukes remove them, propaganda steals them.</p>
         <h4>Elimination: the dead hand</h4>
-        <p>When your continent drops to <strong>0 Population</strong>, you are eliminated, but not quietly. Right away you <strong>fire everything you have loaded</strong> (the cards on your Launchpad, Runway and Harbor), one after another, each at a continent and city of your choice. The weapons in your hand are discarded, not fired. These are normal attacks: the targets may raise shields against them, and every nuke moves the Clock. Then you are out, and play goes on without you.</p>
+        <p>When your continent drops to <strong>0 Population</strong>, you are eliminated, but not quietly. Right away you <strong>fire everything you have loaded</strong> (the cards on your Launchpad, Runway and Harbor), one after another, each at a continent and city of your choice. The weapons in your hand are discarded, not fired. These are normal attacks: the targets may block them with shields, and every nuke moves the Clock. Then you are out, and play goes on without you.</p>
         <p>A dead hand can eliminate someone else, who then fires their own arsenal. Chain reactions are possible.</p>
         <h4>The game ends when</h4>
         <ul>
-          <li>the <strong>Doomsday Clock reaches midnight</strong>: finish the current round, then the surviving player with the <strong>most Population</strong> wins;</li>
+          <li>the <strong>Doomsday Clock reaches midnight</strong>: finish the current turn, then <strong>every other player takes one last turn</strong>; after that the surviving player with the <strong>most Population</strong> wins;</li>
           <li><strong>only one continent is left</strong>: its player wins;</li>
           <li><strong>no continent is left</strong>: the Earth is destroyed and everybody loses.</li>
         </ul>
@@ -401,7 +401,7 @@
         <div class="tw"><table>
           <thead><tr><th>Component</th><th>Qty</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td class="k">Player boards</td><td class="n">5</td><td>One per continent: the continent name and trait, an action track (the six actions in a column, each with a square for your tracker cube), a Launchpad, a Runway and a Harbor (where your loaded weapons lie face down), a Shield slot and an Upgrade slot. Your cities are on the world map, not on your board.</td></tr>
+            <tr><td class="k">Player boards</td><td class="n">5</td><td>One per continent: the continent name and trait, an action track (the six actions in a column, each with a square for your tracker cube), a Launchpad, a Runway and a Harbor (where your loaded weapons lie face down), a Shield slot (where your shield lies face down) and an Upgrade slot. Your cities are on the world map, not on your board.</td></tr>
             <tr><td class="k">Population cubes</td><td class="n">~100</td><td>5 colours, about 20 each (16 start on the map). 1 cube = about 5 million people; each city stands for its whole metropolitan region. The supply is unlimited: if a colour runs out, use any stand-in.</td></tr>
             <tr><td class="k">Fallout tokens</td><td class="n">~40</td><td>Small markers that cover one cube spot. A nuke leaves one for every population cube it removes from a city (see <em>Fallout</em>).</td></tr>
             <tr><td class="k">Game board</td><td class="n">1</td><td>A world map (A2, 594 &times; 420 mm) shared by everyone, in the middle of the table. All five continents in their player colours, with every numbered city in a box of cube spots (a solid starting row and a dashed growth row) linked to its place on the map. In an empty ocean: the Doomsday Clock (32 spots running clockwise to midnight, start spots for 5, 4, 3 and 2 players marked). Bottom right, in the Indian Ocean: the Build and Propaganda deck spots. Keep the cube supply and the fallout tokens next to you, off the board. The Clock marker is any cube or coin.</td></tr>
@@ -409,7 +409,6 @@
             <tr><td class="k">Helper cards</td><td class="n">3 / player</td><td>Poker size, double-sided: Round + Attack, Actions + Good to know, Setup + Game end.</td></tr>
             <tr><td class="k">Build deck</td><td class="n" id="m-build">&mdash;</td><td>Weapons, shields, operations and upgrades.</td></tr>
             <tr><td class="k">Propaganda deck</td><td class="n" id="m-prop">&mdash;</td><td>Successes, backfires and events.</td></tr>
-            <tr><td class="k">First player token</td><td class="n">1</td><td>Any distinct marker; it stays with the first player, not on the board.</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -423,19 +422,16 @@
           <li><b>Shuffle the decks</b>Shuffle the Build and Propaganda decks separately and put each face down on its spot on the game board. There is <strong>one discard pile</strong> for both decks, face up next to the board: whatever was discarded last, from either deck, lies on top for everyone to see. Whenever a deck runs out, during setup too, take that deck's cards out of the discard pile, shuffle them and put them face down as the new deck.</li>
           <li><b>Deal hands</b>Deal each player 3 Build cards. An upgrade among them goes into your Upgrade slot (see <em>Build</em>).</li>
           <li><b>Set the Clock</b>Put a marker on the Clock: 5 players start at 35, 4 players at 30, 3 players at 25, 2 players at 20. Fewer players launch fewer nukes, so the fuse is shorter.</li>
-          <li><b>First player</b>Give the first player token to the most paranoid player.</li>
+          <li><b>Who starts</b>The most paranoid player takes the first turn.</li>
         </ol>
       </section>
 
       <section id="s-round">
         <p class="kicker">04</p>
-        <h3>A round</h3>
-        <ol class="steps">
-          <li><b>Turns, one by one</b>Starting with the first player and going clockwise, each player takes a turn: move your tracker cube to an action (not the one it is on, unless it is on Pass) and resolve it fully. You may play one Operation, before or after your action. Then the next player.</li>
-          <li><b>End of round</b>Discard the shields in your Shield slot. Pass the first player token clockwise.</li>
-        </ol>
+        <h3>Turns</h3>
+        <p>Starting with the most paranoid player and going clockwise, each player takes a turn: move your tracker cube to an action (not the one it is on, unless it is on Pass) and resolve it fully. You may play one Operation, before or after your action. Then the player on your left takes a turn, and so on round the table until the game ends. There are no rounds and no first player token.</p>
         <h4>Hand limit: 5, at all times</h4>
-        <p>You never hold more than <strong>5</strong> Build and Propaganda cards (your tracker cube doesn't count). Whenever a card would be your sixth, choose any one of the six and discard it, the new card included. There is no discarding at the end of the round.</p>
+        <p>You never hold more than <strong>5</strong> Build and Propaganda cards (your tracker cube doesn't count). Whenever a card would be your sixth, choose any one of the six and discard it, the new card included. There is no discarding at the end of your turn.</p>
       </section>
 
       <section id="s-actions">
@@ -444,7 +440,7 @@
         <div class="order">
           <div><b>Build</b><span>Draw 2 Build cards</span></div>
           <div><b>Propaganda</b><span>Draw 1 Propaganda card</span></div>
-          <div><b>Prepare</b><span>Load weapons face down</span></div>
+          <div><b>Prepare</b><span>Load weapons and a shield</span></div>
           <div><b>Attack</b><span>Fire everything loaded</span></div>
           <div><b>Intel</b><span>Look at a hand, draw 1</span></div>
           <div><b>Pass</b><span>Do nothing</span></div>
@@ -467,31 +463,31 @@
         <p>Propaganda never moves the Doomsday Clock.</p>
         <h4>Attack</h4>
         <p>Fire what you have loaded, <strong>one card at a time</strong>: you choose which loaded card goes first, and it resolves completely (see <em>Attacks</em> below). Then you choose again among the cards still loaded, or end the attack. Whatever you don't fire stays loaded for later. You must fire at least one card, so you can only choose Attack with something loaded. Each card is its own attack, aimed on its own: the cards may go at different players.</p>
-        <p>Everyone can see that you are loaded, but not with what, and you don't know whether your target holds a shield.</p>
+        <p>Everyone can see that you are loaded, but not with what. You can see whether your target has a shield in its Shield slot, but not which kind.</p>
         <h4>Prepare</h4>
-        <p>Load weapons from your hand face down: a <strong>missile</strong> on your <strong>Launchpad</strong>, an <strong>aircraft</strong> on your <strong>Runway</strong>, a <strong>ship or submarine</strong> in your <strong>Harbor</strong>. You may load one of each kind in a single Prepare, but you don't have to: any one, any two or all three (at least one). A slot holds one card, and it stays loaded until you fire it. Every weapon says on its card which slot it goes in. You can only choose Prepare with a weapon for an empty slot. Loaded cards don't count towards your hand limit.</p>
+        <p>Load cards from your hand face down: a <strong>missile</strong> on your <strong>Launchpad</strong>, an <strong>aircraft</strong> on your <strong>Runway</strong>, a <strong>ship or submarine</strong> in your <strong>Harbor</strong> and a <strong>shield</strong> in your <strong>Shield slot</strong>. You may fill every slot in a single Prepare, but you don't have to: any one, any two, any three or all four (at least one). A slot holds one card. A weapon stays loaded until you fire it, a shield until it blocks. Every card says which slot it goes in. A full Shield slot may take a new shield: the old one is discarded. You can only choose Prepare with a card for a slot that can take it. Loaded cards don't count towards your hand limit.</p>
         <p>Each slot has its own perk:</p>
         <ul>
           <li><strong>Launchpad (nukes):</strong> simple. Prepare it, then fire it.</li>
           <li><strong>Runway (bombers):</strong> <strong>can turn back.</strong> If a shield blocks the bomber, you may turn it back: it goes back on your Runway (it can't fly again this attack), the Clock doesn't move and their shield is spent.</li>
           <li><strong>Harbor (ships and subs):</strong> <strong>can strike back.</strong> Whenever another player's attack has just resolved against you, you may fire the card in your Harbor straight back at that player's continent (you name the city), as a reaction, even though it is not your turn. The weapon is then discarded.</li>
         </ul>
-        <p>Of the 20 weapons in the Build deck, 10 are nukes, 6 are bombers and 4 sail.</p>
+        <p>Of the 20 weapons in the Build deck, 8 are missiles, 6 are bombers and 6 sail.</p>
         <p>Since you can't take the same action twice in a row, a strike takes two turns: Prepare, then Attack.</p>
         <h4>Intel</h4>
-        <p>Choose another player and look at the cards in their hand (not what is loaded on their Launchpad, Runway and Harbor), then draw <strong>1</strong> Build card. Knowing who holds a shield (or what is coming) tells you where to strike.</p>
+        <p>Choose another player and look at the cards in their hand (not what is loaded on their Launchpad, Runway, Harbor and Shield slot), then draw <strong>1</strong> Build card. Knowing what they hold tells you what is coming, and who keeps a Return to Sender or an Interceptor ready.</p>
         <h4>Pass</h4>
-        <p>Do nothing this round. You move your cube to Pass like any other action. But Pass is never locked: with your cube on Pass you may Pass again, and every other action is open. So you can Pass two rounds in a row, and after a Pass you choose from all six. Use it when nothing else is worth it, or to get every action back.</p>
+        <p>Do nothing this turn. You move your cube to Pass like any other action. But Pass is never locked: with your cube on Pass you may Pass again, and every other action is open. So you can Pass two turns in a row, and after a Pass you choose from all six. Use it when nothing else is worth it, or to get every action back.</p>
         <h4>Shields</h4>
-        <p>There is no Defend action. Shields are <strong>reactions</strong>: you keep them in your hand and play one when your continent is attacked (see <em>Attacks</em>). One shield blocks the whole attack, even a MIRV or Carpet Bombing that hits several of your cities. Playing a shield costs no action.</p>
+        <p>There is no Defend action. Shields go <strong>face down in your Shield slot</strong> with Prepare, and wait there until they block. Each guards against one kind of weapon: <em>Missile Defence</em> against missiles (Launchpad), <em>SAM Site</em> against bombers (Runway), <em>Depth Charges</em> against ships and subs (Harbor), and <em>Iron Curtain</em> against any of them. Your Shield slot holds <strong>one</strong> shield (North America: two). <em>Return to Sender</em> and <em>Interceptor</em> work differently: you keep them in your hand and play them when an attack comes. One shield blocks the whole attack, even a MIRV or Carpet Bombing that hits several of your cities. Blocking costs no action.</p>
       </section>
 
       <section id="s-attack">
         <p class="kicker">06</p>
         <h3>Attacks</h3>
         <ol class="steps">
-          <li><b>Launch</b>Choose one of your loaded cards and turn it over, choose an opponent's continent and name any city on it that still has population cubes: <em>"Europe, Paris!"</em> The city numbers on the map are only there for quick reference. Anyone holding <em>Deepfake</em> may now change the continent.</li>
-          <li><b>The target reacts</b>The target sees the weapon and the city, and decides: let it happen, or play <strong>one shield</strong> from their hand. An <em>Iron Curtain</em> already up blocks it without a new card. Then any other player may play an <em>Interceptor</em> to block it.</li>
+          <li><b>Launch</b>Choose one of your loaded cards and turn it over, choose an opponent's continent and name any city on it that still has population cubes: <em>"Europe, Paris!"</em> The city numbers on the map are only there for quick reference. Anyone else holding <em>Deepfake</em> may now give it a new destination: any continent (their own too) and city.</li>
+          <li><b>The target reacts</b>The target sees the weapon and the city, and decides: let it happen, or block it with <strong>one shield</strong>: a shield in their Shield slot that guards against this kind of weapon (turn it face up), or a <em>Return to Sender</em> from their hand. Then any other player may play an <em>Interceptor</em> to block it.</li>
           <li><b>Resolve</b>The weapon hits the city you named. Nobody can change it unless a card says so. If it was blocked, nothing happens. Otherwise remove the weapon's damage in population cubes. Overkill is wasted.</li>
           <li><b>Move the Clock</b>Move it forward by the weapon's Clock value, even if the attack was blocked or hit nothing.</li>
           <li><b>Discard</b>Discard the weapon. If the target has a card in its <em>Harbor</em>, it may now strike straight back at you with it.</li>
@@ -503,24 +499,24 @@
           <li><strong>You can't aim at a crater.</strong> Name a city that still has population cubes.</li>
         </ul>
         <h4>Fallout</h4>
-        <p>A <strong>nuke</strong> is any weapon with a Clock value of +1 or more. When a nuke removes population cubes from a city, put one <strong>fallout token</strong> for every population cube it removed on that city's <strong>rightmost empty spots</strong>: an ICBM that removes 5 leaves 5, a Tactical Nuke that removes 3 leaves 3. Those spots can never hold a population cube again. The bigger the bomb, the longer the mess lasts. A MIRV leaves 2 on every city it removes 2 population cubes from; the Fallout Bomb also puts 2 fallout on every other city of that continent; the Neutron Bomb leaves none. Fallout that doesn't fit on the empty spots is lost.</p>
+        <p>A <strong>nuke</strong> is any weapon with a Clock value of +1 or more. When a nuke removes population cubes from a city, put one <strong>fallout token</strong> for every population cube it removed on that city's <strong>rightmost empty spots</strong>: an ICBM that removes 5 leaves 5, a Tactical Nuke that removes 3 leaves 3. Those spots can never hold a population cube again. The bigger the bomb, the longer the mess lasts. A MIRV leaves only 1 on every city it removes population cubes from; the Fallout Bomb also puts 2 fallout on every other city of that continent; the Neutron Bomb leaves none. Fallout that doesn't fit on the empty spots is lost.</p>
         <p>Every city box is one line of squares: the solid ones hold the starting cubes, the dashed ones at the end start empty (that difference only matters at setup). Population cubes always fill from the left and fallout always fills from the right, so the first hits on a city take away its empty squares, and once they are gone, fallout eats into the squares that hold cubes. A city whose spots are all fallout is gone for good. Conventional weapons (Clock +0) leave no fallout. <em>Reconstruction</em> can remove 1 fallout.</p>
         <h4>Shields</h4>
-        <p>Every shield blocks an attack <strong>completely</strong>, and you choose it knowing what is coming. Shields differ in what they block: one attack, every attack on you this round, one attack sent straight back, or (the <em>SAM Site</em>) one bomber, which is shot down and can't turn back. See the Build Deck tab. A played shield lies in your Shield slot until the end of the round, then goes to the discard pile. <em>Bunker Buster</em> and <em>Hypersonic Nuke</em> can't be blocked by any shield: no Missile Defence, no Interceptor, not even an Iron Curtain already up. <em>Radar Blackout</em> takes a player's shields down and stops them raising any for the rest of the round; another player's <em>Interceptor</em> can still save them. An attack sent back by <em>Return to Sender</em> can be blocked by the attacker's own Iron Curtain, but it can't be sent back a second time.</p>
-        <div class="tip"><b>The guessing game</b><p>The attacker never knows whether you hold a shield, and you never know what is coming until it is in the air. A shield in your hand is a weapon you don't hold: the hand limit is 5.</p></div>
+        <p>Every shield blocks an attack <strong>completely</strong>, and you decide knowing what is coming. You never have to block: let a small hit through and keep your shield for a bigger one. A shield that blocks goes to the discard pile; one that doesn't stays face down in your Shield slot, turn after turn. The <em>SAM Site</em> shoots the bomber down, so it can't turn back. A strike back from a Harbor is a ship attack, so <em>Depth Charges</em> can stop it. See the Build Deck tab. <em>Bunker Buster</em> and <em>Hypersonic Nuke</em> can't be blocked by any shield: no Missile Defence, no Interceptor, not even an Iron Curtain. <em>Radar Blackout</em> takes a player's shields down and stops them using any until the next turn of whoever played it; another player's <em>Interceptor</em> can still save them. An attack sent back by <em>Return to Sender</em> can be blocked by a fitting shield in the attacker's Shield slot, but it can't be sent back a second time.</p>
+        <div class="tip"><b>The guessing game</b><p>Everyone sees that your Shield slot is full, but not with what. The attacker picks a weapon hoping your shield is the wrong kind, and may fire a small one first to draw your shield out before the big one comes. You never know what is coming until it is in the air.</p></div>
       </section>
 
       <section id="s-example">
         <p class="kicker">07</p>
         <h3>Example: one attack</h3>
-        <p>You play Europe. Your player board has the action track, a <em>Launchpad</em>, a <em>Runway</em>, a <em>Harbor</em>, a <em>Shield</em> slot and an <em>Upgrade</em> slot. Last turn you chose Prepare and loaded an ICBM face down on your Launchpad, so your tracker cube is on Prepare. North America holds a Missile Defence.</p>
+        <p>You play Europe. Your player board has the action track, a <em>Launchpad</em>, a <em>Runway</em>, a <em>Harbor</em>, a <em>Shield</em> slot and an <em>Upgrade</em> slot. Last turn you chose Prepare and loaded an ICBM face down on your Launchpad, so your tracker cube is on Prepare. North America has a shield face down in its Shield slot: a Missile Defence.</p>
         <ol class="steps">
           <li><b>Your turn</b>You move your tracker cube from Prepare to <em>Attack</em>, turn over the ICBM on your Launchpad and name the target: "North America, New York!"</li>
-          <li><b>North America reacts</b>An ICBM takes 5 population cubes, so North America plays its Missile Defence into its Shield slot. The attack is blocked. The Clock still moves +2. Discard the ICBM.</li>
+          <li><b>North America reacts</b>An ICBM is a missile and takes 5 population cubes, so North America turns its Missile Defence face up: the attack is blocked and the Missile Defence is discarded. The Clock still moves +2. Discard the ICBM.</li>
           <li><b>If they had let it happen</b>New York loses 5 population cubes and gets 5 fallout, and the Clock moves +2.</li>
-          <li><b>End of round</b>North America discards its Missile Defence. Your cube stays on Attack: you can't Attack on your next turn, and everyone can see that.</li>
+          <li><b>Afterwards</b>North America's Shield slot stays empty until it Prepares a new shield. Your cube stays on Attack: you can't Attack on your next turn, and everyone can see that.</li>
         </ol>
-        <div class="tip"><b>Saving a shield</b><p>A shield is spent once it blocks. North America might rather let a 1-damage Airstrike through and keep its Missile Defence for the ICBM it expects next.</p></div>
+        <div class="tip"><b>Saving a shield</b><p>A shield is spent once it blocks. North America might rather let a 3-damage Tactical Nuke through and keep its Missile Defence for the ICBM it expects next.</p></div>
       </section>
 
       <section id="s-clock">
@@ -567,7 +563,7 @@
     <div class="stamp" aria-hidden="true">Restricted</div>
     <p class="eyebrow">Build deck &middot; 44 &times; 68 mm Mini-Euro &middot; printed at 1:1</p>
     <h1>Build Deck</h1>
-    <p class="lede">Drawn with the Build action. Weapons are loaded with Prepare (missiles on the Launchpad, aircraft on the Runway, ships and subs in the Harbor, as the card says) and fired with Attack; shields are played from your hand when you are attacked. The keyline colour shows the category. All numbers are first-pass placeholders.</p>
+    <p class="lede">Drawn with the Build action. Weapons are loaded with Prepare (missiles on the Launchpad, aircraft on the Runway, ships and subs in the Harbor, as the card says) and fired with Attack. Shields go face down in your Shield slot with Prepare, except Return to Sender and Interceptor, which you play from your hand when an attack comes. The keyline colour shows the category. All numbers are first-pass placeholders.</p>
   </header>
   <section>
     <h2>Cards</h2>
@@ -628,13 +624,56 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.32.1</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 2</td><td>52 Deepfake, 41&ndash;42 Black Market: new text</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>Reprint for 0.32.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 2</td><td>50 Sleeper Agent: &ldquo;since your last turn&rdquo;</td></tr>
+        <tr><td class="k">First player token</td><td>No longer used: leave it out of the box</td></tr>
+        <tr><td class="k">Helper cards</td><td>The Round card still describes rounds (to review with the helper cards)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>Reprint for 0.31.1</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Player boards</td><td>Africa: shorter Open Plains text. North America: Early Warning with numbers. Asia: new Hardened Megacities text</td></tr>
+        <tr><td class="k">Build 1</td><td>5 MIRV: leaves 1 fallout on each city</td></tr>
+        <tr><td class="k">Build 2</td><td>56 Salted Warheads: 2 additional fallout</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>Reprint for 0.31.0</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 1</td><td>1&ndash;2 Tactical Nuke, 10 Neutron Bomb, 14 Bunker Buster (Clock +2), 17&ndash;18 Nuclear Sub (Clock +3); 4 Airstrike (was ICBM), 6 Destroyer (was MIRV), 13 Naval Barrage (was Nuclear Bomber); 21&ndash;22 Missile Defence, 24 Iron Curtain, 28&ndash;29 SAM Site: new text and footer; 23 and 36 Depth Charges (new, were Missile Defence and Peace Treaty)</td></tr>
+        <tr><td class="k">Build 2</td><td>40 Sabotage, 47 Abort Mission, 49 Radar Blackout: new text; 58 Peace Treaty (moved here from Build 1)</td></tr>
+        <tr><td class="k">Player boards</td><td>All five: the Shield slot caption. North America: the Early Warning trait</td></tr>
+        <tr><td class="k">Helper cards</td><td>Not yet updated for prepared shields (to review before the next test)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>To print for the next test</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
       <tbody>
         <tr><td class="k">Player boards</td><td>5 boards, two per A3 sheet (layers <em>Board - North America</em>, <em>Board - Europe</em>, <em>Board - Asia</em>, <em>Board - Africa</em>, <em>Board - South America</em>, page 1). Show North America and Europe together for the first sheet, Asia and Africa for the second, South America alone for the third.</td></tr>
-        <tr><td class="k">Build 1</td><td>Cards 1&ndash;36: weapons, decoys and the Missile Defences, 4 rows of 9 on A3 (layer <em>Build 1</em>, page 1)</td></tr>
-        <tr><td class="k">Build 2</td><td>Cards 37&ndash;72: the other shields, specials and upgrades (layer <em>Build 2</em>, page 1)</td></tr>
+        <tr><td class="k">Build 1</td><td>Cards 1&ndash;36: weapons, shields and the first specials, 4 rows of 9 on A3 (layer <em>Build 1</em>, page 1)</td></tr>
+        <tr><td class="k">Build 2</td><td>Cards 37&ndash;58: specials and upgrades (layer <em>Build 2</em>, page 1)</td></tr>
         <tr><td class="k">Build (Back)</td><td>Page 2. Print it behind each Build sheet; every Build back is the same.</td></tr>
         <tr><td class="k">Propaganda</td><td>All 29 Propaganda cards (layer <em>Propaganda</em>, page 1)</td></tr>
         <tr><td class="k">Propaganda (Back)</td><td>Page 2, layer <em>Propaganda (Back)</em></td></tr>
@@ -647,6 +686,45 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.32.1</p><p class="vt">Deepfake and Black Market</p></div>
+        <ul>
+          <li><b>Deepfake:</b> <i>When another player launches a weapon, play this to send it to any city on any continent, your own too.</i> You now name the city as well (the attacker used to), and your own continent is allowed (it used to be the one place you couldn't send it).</li>
+          <li><b>Black Market:</b> <i>Discard any number of cards from your hand, then draw that many Build cards plus 1.</i> The extra card makes up for the Black Market itself, so trading in 3 brings 4. With nothing to trade in, it simply brings 1 card.</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><p class="v">0.32.0</p><p class="vt">No more rounds</p></div>
+        <ul>
+          <li><b>Turns simply go round the table.</b> The most paranoid player starts, then play goes clockwise, turn after turn, until the game ends. There is no first player token and no end-of-round step any more. In playtests the round added nothing: the only things that happened at its end (shields, the token) were already gone or pointless.</li>
+          <li><b>Midnight:</b> when the Clock reaches midnight, finish the current turn, then every other player takes one last turn. Then the game ends and most Population wins.</li>
+          <li><b>Sleeper Agent</b> takes cubes from a player who attacked you <i>since your last turn</i> (was: last round). Pass reads &ldquo;Do nothing this turn&rdquo;.</li>
+          <li><b>Online:</b> a disconnected player&rsquo;s bot answers for them until their next turn; at its start they take over again, the game waits for them, or after 2 minutes they are eliminated.</li>
+          <li>In 2,000-game sims every seat wins about its fair share (4 players: 23&ndash;25% with Normal bots, 22&ndash;23% with Hard), and the endings stay as they were (Hard, 4 players: 58% at midnight).</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><p class="v">0.31.1</p><p class="vt">Traits, MIRV and Salted Warheads</p></div>
+        <ul>
+          <li><b>Asia: Hardened Megacities</b> now reads <i>When one of your cities would take 3 or more damage, it takes 1 less</i>, for every weapon, not only nukes (in practice this adds the Destroyer). At the table it was unclear whether conventional weapons counted.</li>
+          <li><b>Africa: Open Plains</b> is shorter: <i>Every time one of your cities would get fallout, it gets up to 2 fewer.</i> <b>North America: Early Warning</b> uses numbers: <i>Your Shield slot holds 2 shields instead of 1.</i></li>
+          <li><b>MIRV</b> still hits every city on the target continent for 2, but leaves only <b>1</b> fallout on each (was 2).</li>
+          <li><b>Operations are green in the digital game</b>, like on the printed cards and like Propaganda Successes (both are cards you get to use); Upgrades are purple, as printed.</li>
+          <li><b>Salted Warheads</b> leaves <b>2</b> extra fallout on every city a weapon hits (was 1).</li>
+        </ul>
+      </article>
+      <article class="rel">
+        <div><p class="v">0.31.0</p><p class="vt">Prepared shields</p></div>
+        <ul>
+          <li><b>Shields are prepared.</b> Missile Defence, SAM Site, Depth Charges and Iron Curtain go face down in your <b>Shield slot</b> with Prepare (along with your weapons, in the same action) and stay there until they block. Everyone sees that your slot is full, not with what. A full slot may take a new shield: the old one is discarded. Shields are no longer discarded at the end of the round.</li>
+          <li><b>Each shield stops one kind of weapon:</b> Missile Defence a missile (Launchpad), SAM Site a bomber (Runway, shot down so it can&rsquo;t turn back), the new <b>Depth Charges</b> (2) a ship or sub (Harbor, strike backs included). <b>Iron Curtain</b> blocks one attack of any kind, once. Blocking is still your choice: let a small hit through and keep the shield for a bigger one.</li>
+          <li><b>Return to Sender and Interceptor</b> stay in your hand and are played when an attack comes, as before.</li>
+          <li><b>Weapons 8 / 6 / 6:</b> Tactical Nuke 2, every other missile 1; Airstrike 2, Carpet Bombing 2, Nuclear Bomber 1, Bunker Buster 1; Nuclear Sub, Destroyer and Naval Barrage 2 each. Shields: Missile Defence 2 (was 3), SAM Site 2, Depth Charges 2 (new), Iron Curtain 1, Return to Sender 1, Interceptor 2. The Build deck holds 58 cards.</li>
+          <li><b>Higher Clock values</b>, so games keep their pace with fewer big nukes in the deck: Tactical Nuke, Neutron Bomb and Bunker Buster +2 (were +1), Nuclear Sub +3 (was +2). Without this, simulated 4-player games almost never reached midnight (Normal 3%, Hard 18%); now Normal 27% and Hard 62% (old rules 34% and 68%).</li>
+          <li><b>North America: Early Warning</b> is now <i>Your Shield slot holds two shields instead of one.</i></li>
+          <li><b>Radar Blackout</b> lies in the target&rsquo;s Shield slot until your next turn (was: until the end of the round); until then they can&rsquo;t prepare or play shields. <b>Sabotage</b> can pick the Shield slot (with two shields there, a random one goes). <b>Abort Mission</b> sends the shields back to the hand too.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.30.5</p><p class="vt">Intel sees the hand only</p></div>
         <ul>
@@ -1165,16 +1243,16 @@
 /* ============ data ============ */
 const CONTINENTS = [
   {k:"na", n:"North America", c:"var(--p-na)", tag:"Balanced",
-   tr:["Early Warning", "Once per round, when one of your cities is attacked, draw 1 Build card before you decide whether to block."],
+   tr:["Early Warning", "Your Shield slot holds 2 shields instead of 1."],
    cities:[["Los Angeles",5,2],["New York",6,2],["Mexico City",5,2]]},
   {k:"eu", n:"Europe", c:"var(--p-eu)", tag:"Many small cities, hard to hurt badly",
    tr:["Bounce Back", "Every time you lose a city, put 1 population cube from the supply on another of your cities."],
    cities:[["London",4,2],["Berlin",3,1],["Paris",3,1],["Moscow",3,1],["Rome",3,1]]},
   {k:"as", n:"Asia", c:"var(--p-as)", tag:"Megacities, big targets",
-   tr:["Hardened Megacities", "When a nuke would deal 3 or more damage to one of your cities, it deals 1 less."],
+   tr:["Hardened Megacities", "When one of your cities would take 3 or more damage, it takes 1 less."],
    cities:[["Tokyo",8,3],["Shanghai",8,3]]},
   {k:"af", n:"Africa", c:"var(--p-af)", tag:"The youngest, fastest-growing population",
-   tr:["Open Plains", "Every time one of your cities would get fallout, it gets up to 2 fewer (1 or 2 become none, 3 become 1)."],
+   tr:["Open Plains", "Every time one of your cities would get fallout, it gets up to 2 fewer."],
    cities:[["Cairo",5,2],["Lagos",5,2],["Nairobi",3,1],["Johannesburg",3,1]]},
   {k:"sa", n:"South America", c:"var(--p-sa)", tag:"Two giant cities and the commodities to feed them",
    tr:["Spoils of War", "When you destroy a city, take 1 of its population cubes and put it on one of your cities."],
@@ -1218,44 +1296,45 @@ const PROPAGANDA = [
 
 /* card text matches the Affinity Build sheet word for word */
 const BUILD = [
-  {n:"Tactical Nuke", t:"weapon", s:"lp", q:2, dmg:"3", clk:"+1", tx:"Hits the target city for 3.", fl:"Only 10 kilotons. Practically polite."},
-  {n:"ICBM", t:"weapon", s:"lp", q:2, dmg:"5", clk:"+2", tx:"Hits the target city for 5.", fl:"1.2 megatons, delivered to your door."},
-  {n:"MIRV", t:"weapon", s:"lp", q:2, dmg:"2", dl:"EACH CITY", clk:"+2", tx:"Hits every city on the target continent for 2.", fl:"Why choose?"},
+  {n:"Tactical Nuke", t:"weapon", s:"lp", q:2, dmg:"3", clk:"+2", tx:"Hits the target city for 3.", fl:"Only 10 kilotons. Practically polite."},
+  {n:"ICBM", t:"weapon", s:"lp", q:1, dmg:"5", clk:"+2", tx:"Hits the target city for 5.", fl:"1.2 megatons, delivered to your door."},
+  {n:"MIRV", t:"weapon", s:"lp", q:1, dmg:"2", dl:"EACH CITY", clk:"+2", tx:"Hits every city on the target continent for 2. Leaves 1 fallout on each.", fl:"Why choose?"},
   {n:"Fallout Bomb", t:"weapon", s:"lp", q:1, dmg:"3", clk:"+2", tx:"Hits the target city for 3. Every other city on that continent gets 2 fallout.", fl:"Shares generously with the neighbours."},
   {n:"Tsar Bomba", t:"weapon", s:"lp", q:1, dmg:"6", clk:"+3", tx:"Hits the target city for 6.", fl:"50 megatons of overcompensation."},
   {n:"Hypersonic Nuke", t:"weapon", s:"lp", q:1, dmg:"4", clk:"+2", tx:"Hits the target city for 4. Can't be blocked by shields.", fl:"Too fast to argue with."},
-  {n:"Neutron Bomb", t:"weapon", s:"lp", q:1, dmg:"4", clk:"+1", tx:"Hits the target city for 4. Leaves no fallout.", fl:"Kills the people, spares the furniture."},
-  {n:"Airstrike", t:"weapon", s:"rw", q:1, dmg:"2", clk:"0", tx:"Not nuclear. Hits the target city for 2.", fl:"The world barely notices."},
-  {n:"Nuclear Bomber", t:"weapon", s:"rw", q:2, dmg:"4", clk:"+2", tx:"Hits the target city for 4.", fl:"The pilot has second thoughts."},
-  {n:"Bunker Buster", t:"weapon", s:"rw", q:1, dmg:"3", clk:"+1", tx:"Hits the target city for 3. Can't be blocked by shields.", fl:"Knock knock."},
+  {n:"Neutron Bomb", t:"weapon", s:"lp", q:1, dmg:"4", clk:"+2", tx:"Hits the target city for 4. Leaves no fallout.", fl:"Kills the people, spares the furniture."},
+  {n:"Airstrike", t:"weapon", s:"rw", q:2, dmg:"2", clk:"0", tx:"Not nuclear. Hits the target city for 2.", fl:"The world barely notices."},
+  {n:"Nuclear Bomber", t:"weapon", s:"rw", q:1, dmg:"4", clk:"+2", tx:"Hits the target city for 4.", fl:"The pilot has second thoughts."},
+  {n:"Bunker Buster", t:"weapon", s:"rw", q:1, dmg:"3", clk:"+2", tx:"Hits the target city for 3. Can't be blocked by shields.", fl:"Knock knock."},
   {n:"Carpet Bombing", t:"weapon", s:"rw", q:2, dmg:"2", dl:"PER CITY", clk:"0", tx:"Not nuclear. Hits two cities of your choice on the target continent for 2 each.", fl:"Thorough, not precise."},
-  {n:"Nuclear Sub", t:"weapon", s:"hb", q:2, dmg:"4", clk:"+2", tx:"Hits the target city for 4.", fl:"Somewhere under the Atlantic."},
-  {n:"Destroyer", t:"weapon", s:"hb", q:1, dmg:"3", clk:"0", tx:"Not nuclear. Hits the target city for 3.", fl:"Escorting nothing in particular."},
-  {n:"Naval Barrage", t:"weapon", s:"hb", q:1, dmg:"1", dl:"EACH CITY", clk:"0", tx:"Not nuclear. Hits every city on the target continent for 1.", fl:"Shore leave, but louder."},
-  {n:"Missile Defence", t:"shield", q:3, bl:"1", tx:"Play it when your continent is attacked: block the whole attack.", fl:"Works in most of the tests."},
-  {n:"Iron Curtain", t:"shield", q:1, bl:"ALL", tx:"Play it when your continent is attacked: block that attack and every other attack on your continent until the end of the round.", fl:"Drawn shut."},
+  {n:"Nuclear Sub", t:"weapon", s:"hb", q:2, dmg:"4", clk:"+3", tx:"Hits the target city for 4.", fl:"Somewhere under the Atlantic."},
+  {n:"Destroyer", t:"weapon", s:"hb", q:2, dmg:"3", clk:"0", tx:"Not nuclear. Hits the target city for 3.", fl:"Escorting nothing in particular."},
+  {n:"Naval Barrage", t:"weapon", s:"hb", q:2, dmg:"1", dl:"EACH CITY", clk:"0", tx:"Not nuclear. Hits every city on the target continent for 1.", fl:"Shore leave, but louder."},
+  {n:"Missile Defence", t:"shield", gd:"lp", q:2, bl:"1", tx:"Prepare it in your Shield slot. It blocks one Launchpad weapon fired at your continent.", fl:"Works in most of the tests."},
+  {n:"Iron Curtain", t:"shield", gd:"any", q:1, bl:"1", tx:"Prepare it in your Shield slot. It blocks one attack of any kind on your continent.", fl:"Drawn shut."},
   {n:"Return to Sender", t:"shield", q:1, bl:"1", tx:"Play it when your continent is attacked: block the whole attack and send it back to a city of your choice on the attacker's continent. No extra Clock.", fl:"No forwarding address."},
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block the whole attack.", fl:"Friends in high orbits."},
-  {n:"SAM Site", t:"shield", q:2, bl:"1", tx:"Play it when a bomber (a Runway weapon) attacks your continent: block that attack. The bomber is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
+  {n:"SAM Site", t:"shield", gd:"rw", q:2, bl:"1", tx:"Prepare it in your Shield slot. It blocks one Runway weapon fired at your continent. It is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
+  {n:"Depth Charges", t:"shield", gd:"hb", q:2, bl:"1", tx:"Prepare it in your Shield slot. It blocks one Harbor weapon fired at your continent, even a strike back.", fl:"Fishing, with extra steps."},
   {n:"Defence Cuts", t:"special", q:2, tx:"Choose another player: they discard every shield in their hand.", fl:"Efficiency savings."},
   {n:"Reconstruction", t:"special", q:2, tx:"Put 2 population cubes from the supply on your cities, one at a time, or remove all the fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:2, tx:"Give a card from your hand to another player and take up to 2 random cards from their hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 3 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
   {n:"Arms Race", t:"special", q:2, tx:"You draw 2 Build cards, every other player draws 1. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
-  {n:"Sabotage", t:"special", q:1, tx:"Choose another player and one of their loaded slots (Launchpad, Runway or Harbor), without looking: discard the card loaded there.", fl:"Someone loosened a bolt."},
-  {n:"Black Market", t:"special", q:2, tx:"Discard any number of cards from your hand, then draw that many Build cards.", fl:"No receipts. No questions."},
+  {n:"Sabotage", t:"special", q:1, tx:"Choose another player and one of their slots (Launchpad, Runway, Harbor or Shield) without looking: discard a card there.", fl:"Someone loosened a bolt."},
+  {n:"Black Market", t:"special", q:2, tx:"Discard any number of cards from your hand, then draw that many Build cards plus 1.", fl:"No receipts. No questions."},
   {n:"Weather Balloon", t:"special", q:2, tx:"Look at another player's hand.", fl:"Just measuring the weather."},
   {n:"Codebreakers", t:"special", q:2, tx:"Look at the top 3 cards of the Build deck. Take 1 into your hand and discard the other 2.", fl:"Enigma was the easy one."},
-  {n:"Abort Mission", t:"special", q:1, tx:"Choose another player: their loaded cards (Launchpad, Runway and Harbor) go back to their hand.", fl:"Stand down. That's an order."},
+  {n:"Abort Mission", t:"special", q:1, tx:"Choose another player: their loaded cards and their shields go back to their hand.", fl:"Stand down. That's an order."},
   {n:"Disarmament Talks", t:"special", q:1, tx:"Every player discards all their loaded cards (Launchpad, Runway and Harbor).", fl:"Everyone puts their toys away."},
-  {n:"Radar Blackout", t:"special", q:1, tx:"Discard the shields in another player's Shield slot, then put this card there. They can't play shields for the rest of this round.", fl:"Static on every screen."},
-  {n:"Sleeper Agent", t:"special", q:1, tx:"Take 2 population cubes from the cities of a player who attacked you last round and put them on your cities. You choose the cities.", fl:"Activated by a postcard."},
+  {n:"Radar Blackout", t:"special", q:1, tx:"Discard the shields in another player's Shield slot and put this card there until your next turn. They can't prepare or play shields until then.", fl:"Static on every screen."},
+  {n:"Sleeper Agent", t:"special", q:1, tx:"Take 2 population cubes from the cities of a player who attacked you since your last turn and put them on your cities. You choose the cities.", fl:"Activated by a postcard."},
   {n:"Counterspin", t:"special", q:1, tx:"Play it when another player's Free Concert, Leaflet Drop or Olympic Gold Propaganda card targets you: cancel it.", fl:"No, you are."},
-  {n:"Deepfake", t:"special", q:1, tx:"Play it when any weapon is launched: you pick the continent it goes to (not your own); the attacker names the city.", fl:"Seeing is no longer believing."},
+  {n:"Deepfake", t:"special", q:1, tx:"When another player launches a weapon, play this to send it to any city on any continent, your own too.", fl:"Seeing is no longer believing."},
   {n:"Arms Factory", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Build, draw 3 Build cards instead of 2.", fl:"Overtime is mandatory."},
   {n:"Spin Doctors", t:"upgrade", q:1, tx:"When you draw this card, place it in your Upgrade slot. Whenever you take the Propaganda action, you may discard the card you draw and draw a replacement. You must use the replacement card.", fl:"Truth, lightly edited."},
   {n:"Supply Depot", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Prepare, also draw 1 Build card.", fl:"Everything is accounted for, somewhere."},
-  {n:"Salted Warheads", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Attack, each of your weapons leaves 1 additional Fallout on every city it hits.", fl:"Nothing grows here any more."},
+  {n:"Salted Warheads", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you Attack, each of your weapons leaves 2 additional Fallout on every city it hits.", fl:"Nothing grows here any more."},
   {n:"Spy Network", t:"upgrade", q:1, tx:"When you draw this, place it in your Upgrade slot. Whenever you take the Intel action, also take 1 random card from the hand you look at.", fl:"Trust no one. Not even us."}
 ];
 
@@ -1347,7 +1426,7 @@ function cardHTML(c){
     '<p class="bn">' + c.n + '</p><div class="rl" style="top:9.3mm"></div>' +
     (boxes ? '<div class="boxes">' + boxes + "</div>" : "") +
     '<p class="bx' + (boxes ? "" : " up") + '">' + c.tx + '</p><p class="fl">' + c.fl + "</p>" +
-    '<p class="bf">' + foot(c.t) + (c.s ? " &middot; " + (c.s === "lp" ? "Launchpad" : c.s === "rw" ? "Runway" : "Harbor") : "") + "</p></div></div>";
+    '<p class="bf">' + foot(c.t) + (c.s ? " &middot; " + (c.s === "lp" ? "Launchpad" : c.s === "rw" ? "Runway" : "Harbor") : c.gd ? " &middot; Shield slot" : "") + "</p></div></div>";
 }
 /* long names shrink to stay on one line above the rule, like the smaller names on the printed cards */
 function fitNames(el){
