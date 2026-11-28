@@ -364,7 +364,7 @@
 <div class="view" id="v-manual" role="tabpanel" aria-labelledby="t-manual">
   <header>
     <div class="stamp" aria-hidden="true">Top secret</div>
-    <p class="eyebrow">File no. 0.32.4 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
+    <p class="eyebrow">File no. 0.32.5 &middot; Rulebook &middot; 2&ndash;5 players &middot; ~60 minutes &middot; Distribution: players only</p>
     <h1>How to Play</h1>
     <p class="lede">Each player rules a continent. You stockpile weapons, spread propaganda and launch at your neighbours, all while the <strong>Doomsday Clock</strong> ticks toward midnight. When it strikes, whoever has the most people left rules over <span class="redact" tabindex="0" title="Declassified on hover">the biggest pile of ash</span>.</p>
     <div class="stats">
@@ -624,6 +624,17 @@
     </div>
   </section>
   <section>
+    <h2>Reprint for 0.32.5</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Build 1</td><td>30&ndash;31 Defence Cuts: removed (leave the slots empty, take the cards out of the deck)</td></tr>
+        <tr><td class="k">Build 2</td><td>40 Sabotage, 47 Abort Mission: new text</td></tr>
+        <tr><td class="k">Propaganda</td><td>34 Atomic Tourism: new text and stat box (+1 per city)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <section>
     <h2>Reprint for 0.32.3</h2>
     <div class="tw"><table>
       <thead><tr><th>Sheet</th><th>Cards</th></tr></thead>
@@ -697,6 +708,15 @@
   <section>
     <h2>Releases</h2>
     <div class="log">
+      <article class="rel">
+        <div><p class="v">0.32.5</p><p class="vt">Fewer exceptions</p></div>
+        <ul>
+          <li><b>Atomic Tourism</b> now gives 1 population cube to every city with fallout (that has room for it). Craters stay craters: no card brings a city back any more, so at the table a crater&rsquo;s box can simply be cleared.</li>
+          <li><b>Defence Cuts is gone</b> (2 cards); the Build deck holds 56.</li>
+          <li><b>Abort Mission</b> sends only the loaded weapons back to the hand; shields stay in the Shield slot. <b>Sabotage</b> no longer says &ldquo;without looking&rdquo; (the discard pile is face up anyway).</li>
+          <li><b>Digital:</b> a card played at someone (Weather Balloon, Sabotage, Arms Deal&hellip;) and an Intel action say whom they target; Arms Deal shows what you gave and got, like Briefcase Swap; a strike back waits for your click; the card choice windows have room between their cards; debug &ldquo;Draw 5&rdquo;.</li>
+        </ul>
+      </article>
       <article class="rel">
         <div><p class="v">0.32.4</p><p class="vt">Terrain and table polish</p></div>
         <ul>
@@ -1320,7 +1340,7 @@ const PROPAGANDA = [
   {n:"Alien Abduction", t:"event", q:1, boxes:[["-1","EVERY CITY"]], tx:"Flying saucers beam up 1 population cube from every city worldwide.", fl:"We come in peace. Mostly."},
   {n:"Atomic Lizard", t:"event", q:1, boxes:[["-1","YOUR CITIES"]], tx:"A giant lizard stomps through your territory: every one of your cities loses 1 population cube.", fl:"It was only looking for its keys."},
   {n:"Briefcase Swap", t:"event", q:1, boxes:[["1","CARD LEFT"]], tx:"Every player gives 1 random card from their hand to the player on their left.", fl:"Identical luggage, different summit."},
-  {n:"Atomic Tourism", t:"event", q:1, boxes:[["+1","PER CRATER"]], tx:"Every crater of a player still in the game gets 1 population cube from the supply.", fl:"Glowing reviews."},
+  {n:"Atomic Tourism", t:"event", q:1, boxes:[["+1","PER CITY"]], tx:"Every city with fallout gets 1 population cube from the supply.", fl:"Glowing reviews."},
   {n:"Nuclear Testing", t:"event", q:1, boxes:[["-1","MINUTE"]], tx:"Move the Doomsday Clock 1 minute closer to midnight.", fl:"Just checking it still works."},
   {n:"Meteor Shower", t:"event", q:1, boxes:[["-2","EVERY CITY"]], tx:"Every city worldwide loses 2 population cubes. Not nuclear.", fl:"For once, not anybody's fault."},
   {n:"Moon Colony", t:"event", q:1, tx:"One of your own cities, your choice, blasts off for the Moon: it leaves the game with all its population cubes.", fl:"Low gravity. High rent."},
@@ -1352,16 +1372,15 @@ const BUILD = [
   {n:"Interceptor", t:"shield", q:2, bl:"1", tx:"Play it when any player is attacked, you included: block the whole attack.", fl:"Friends in high orbits."},
   {n:"SAM Site", t:"shield", gd:"rw", q:2, bl:"1", tx:"Prepare it in your Shield slot. It blocks one Runway weapon fired at your continent. It is shot down, so it can't turn back.", fl:"Today's forecast: scattered aircraft."},
   {n:"Depth Charges", t:"shield", gd:"hb", q:2, bl:"1", tx:"Prepare it in your Shield slot. It blocks one Harbor weapon fired at your continent, even a strike back.", fl:"Fishing, with extra steps."},
-  {n:"Defence Cuts", t:"special", q:2, tx:"Choose another player: they discard every shield in their hand.", fl:"Efficiency savings."},
   {n:"Reconstruction", t:"special", q:2, tx:"Put 2 population cubes from the supply on your cities, one at a time, or remove all the fallout from one of your cities.", fl:"Now with fewer windows."},
   {n:"Arms Deal", t:"special", q:2, tx:"Give a card from your hand to another player and take up to 2 random cards from their hand.", fl:"No questions asked."},
   {n:"Peace Treaty", t:"special", q:2, tx:"Turn the Doomsday Clock back 3 minutes, but never past its starting position.", fl:"Signed in triplicate, ignored by Tuesday."},
   {n:"Arms Race", t:"special", q:2, tx:"You draw 2 Build cards, every other player draws 1. Move the Doomsday Clock 1 minute closer to midnight.", fl:"Everybody wins. Briefly."},
-  {n:"Sabotage", t:"special", q:1, tx:"Choose another player and one of their slots (Launchpad, Runway, Harbor or Shield) without looking: discard a card there.", fl:"Someone loosened a bolt."},
+  {n:"Sabotage", t:"special", q:1, tx:"Choose another player and one of their slots (Launchpad, Runway, Harbor or Shield): discard the card there.", fl:"Someone loosened a bolt."},
   {n:"Black Market", t:"special", q:2, tx:"Discard any number of cards from your hand, then draw that many Build cards plus 1.", fl:"No receipts. No questions."},
   {n:"Weather Balloon", t:"special", q:2, tx:"Look at another player's hand.", fl:"Just measuring the weather."},
   {n:"Codebreakers", t:"special", q:2, tx:"Look at the top 3 cards of the Build deck. Take 1 into your hand and discard the other 2.", fl:"Enigma was the easy one."},
-  {n:"Abort Mission", t:"special", q:1, tx:"Choose another player: their loaded cards and their shields go back to their hand.", fl:"Stand down. That's an order."},
+  {n:"Abort Mission", t:"special", q:1, tx:"Choose another player: their loaded weapons go back to their hand.", fl:"Stand down. That's an order."},
   {n:"Disarmament Talks", t:"special", q:1, tx:"Every player discards all their loaded cards (Launchpad, Runway and Harbor).", fl:"Everyone puts their toys away."},
   {n:"Radar Blackout", t:"special", q:1, tx:"Discard the shields in another player's Shield slot and put this card there until your next turn. They can't prepare or play shields until then.", fl:"Static on every screen."},
   {n:"Sleeper Agent", t:"special", q:1, tx:"Take 2 population cubes from the cities of a player who attacked you since your last turn and put them on your cities. You choose the cities.", fl:"Activated by a postcard."},
